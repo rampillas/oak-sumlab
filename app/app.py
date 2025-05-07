@@ -50,7 +50,7 @@ def get_last_preview_image():
     """Retrieves the last preview image from the preview_images table."""
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
-    cursor.execute("SELECT image FROM preview_images ORDER BY timestamp DESC LIMIT 1")
+    cursor.execute("SELECT image FROM preview_images LIMIT 1")
     result = cursor.fetchone()
     conn.close()
     return result[0] if result and result[0] else None
