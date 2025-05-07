@@ -29,7 +29,8 @@ COORDINATE_SIZE = config["model"]["coordinate_size"]
 IOU_THRESHOLD = config["model"]["iou_threshold"]
 MAX_RETRIES = config["application"]["max_retries"]
 API_ALERT_URL = config["application"]["api_alert_url"]
-OAK_PREVIEW_SIZE = config["oak_camera"]["preview_size"]
+OAK_PREVIEW_SIZE_x = config["oak_camera"]["preview_size_x"]
+OAK_PREVIEW_SIZE_y = config["oak_camera"]["preview_size_y"]
 OAK_FPS = config["oak_camera"]["fps"]
 NUMBER_OF_DETECTION_CLASSES = config["oak_camera"]["number_of_detection_classes"]
 
@@ -232,7 +233,7 @@ def initialize_camera():
     try:
         pipeline = dai.Pipeline()
         cam_rgb = pipeline.create(dai.node.ColorCamera)
-        cam_rgb.setPreviewSize(OAK_PREVIEW_SIZE, OAK_PREVIEW_SIZE)
+        cam_rgb.setPreviewSize(OAK_PREVIEW_SIZE_x, OAK_PREVIEW_SIZE_y)
         cam_rgb.setInterleaved(False)
         cam_rgb.setFps(OAK_FPS)
 
