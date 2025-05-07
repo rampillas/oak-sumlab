@@ -398,6 +398,14 @@ def run_camera(pipeline):
                                 frame_count=0
                             else:
                                 frame_count+=1
+                if not tracklets:
+                    if send_image:
+                        if frame_count % int(OAK_FPS * refresh_rate) == 0:
+                            image_data = cv2.imencode(".jpg", frame)[1].tobytes()
+                            save_image(image_data)
+                            frame_count=0
+                        else:
+                            frame_count+=1
 
                 time.sleep(0.03)
             except Exception as e:
