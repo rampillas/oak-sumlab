@@ -1,0 +1,77 @@
+# config.yaml
+
+# --- Server Settings ---
+servers:
+  streamlit:
+    port: 8501
+    address: 0.0.0.0
+  fastapi:
+    port: 8000
+    address: 0.0.0.0
+
+# --- Master Database ---
+master_db:
+  host: 10.147.17.42
+  name: circuit
+  user: postgres
+  password: Madremia902
+
+# --- Data Storage ---
+data:
+  db_path: ../data/detections.db
+  status_file: ../data/status.yaml
+  sumlab_logo: ../data/sumlab_logo.png #Add path for sumlab logo
+  eu_footer: ../data/eu_footer.png #Add path for eu_footer
+
+# --- Model Configuration ---
+model:
+  yolov8n_blob_path: ../model/yolov8n_openvino_2022.1_6shave.blob
+  confidence_threshold: 0.5
+  num_classes: 80
+  coordinate_size: 4
+  iou_threshold: 0.4
+
+# --- Thread Settings ---
+threads:
+  num_threads: 4  # Total number of threads
+  # Configuration for specific thread tasks
+  tasks:
+    send_hourly_data:
+      save_data_interval: 60 # Time in seconds for saving data to master db. 
+    delete_old_images:
+      delete_images_interval: 60 # Time in seconds for deleting old images.
+    data_fetcher:
+      interval_seconds: 60  # Example: How often to fetch new data
+    data_analyzer:
+      max_data_size: 1000  # Example: Max data rows to analyze
+
+# --- Logging ---
+logging:
+  log_dir: ../logs
+  default_log_level: INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  # Specific log files to show on app.py
+  monitored_logs:
+    - camera_service.log
+    - guardar_horario.log
+    - fastapi_server.log
+    - start_threads.log
+
+# --- Application-Specific Settings ---
+application:
+  keep_contrary_images: False
+  max_retries: 3
+  api_alert_url: http://0.0.0.0:8000/alerta
+  api_batch_url: http://0.0.0.0:8000/subir-detecciones
+  api_last_upload_url: http://0.0.0.0:8000/last-upload-time
+
+# --- Oak Camera Settings ---
+oak_camera:
+  preview_size: 640
+  fps: 20
+  number_of_detection_classes: [0, 2, 5, 7]
+
+# --- Vehicle Tracker Settings ---
+vehicle_tracker:
+  threshold_dist_delta: 0.001
+  max_history: 20
+  max_history_positions: 10

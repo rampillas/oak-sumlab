@@ -1,0 +1,17 @@
+services:
+  oak_app:
+    build: .
+    container_name: oak_app
+    privileged: true  # Necessary for camera access
+    devices:
+      - "/dev/video0:/dev/video0"  # USB camera access
+    ports:
+      - "8501:8501"
+    volumes:
+      - type: bind
+        source: ./configuraciones/
+        target: /config/
+    environment:
+      - CONFIG_PATH=/config/config.yaml 
+
+    restart: unless-stopped

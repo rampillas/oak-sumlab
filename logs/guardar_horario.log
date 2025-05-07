@@ -1,0 +1,1786 @@
+2025-03-10 15:48:02,126 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:48:02,127 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:48:02.127259
+2025-03-10 15:48:02,127 - INFO - 🔄 Deleting images older than 2025-03-10 15:47:02...
+2025-03-10 15:48:02,127 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:48:02,129 - INFO - 🔄 Deleting 0 images
+2025-03-10 15:48:02,130 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:48:02,156 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-03-10 15:48:02,156 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-03-10 15:48:02,156 - INFO - 😴 No new data to upload. Waiting...
+2025-03-10 15:49:02,137 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:49:02.137454
+2025-03-10 15:49:02,138 - INFO - 🔄 Deleting images older than 2025-03-10 15:48:02...
+2025-03-10 15:49:02,138 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:49:02,138 - INFO - 🔄 Deleting 0 images
+2025-03-10 15:49:02,138 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:49:02,163 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:49:02,200 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:37:24
+2025-03-10 15:49:02,200 - INFO - ⏳ Uploading data from 2025-03-10 15:37:24 to 2025-03-10 15:48:00
+2025-03-10 15:49:02,201 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 15:49:55,884 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:49:55.884055
+2025-03-10 15:49:55,887 - INFO - 🔄 Deleting images older than 2025-03-10 15:48:55...
+2025-03-10 15:49:55,887 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:49:55,887 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:49:55,887 - INFO - 🔄 Deleting 0 images
+2025-03-10 15:49:55,888 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:49:55,892 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-03-10 15:49:55,892 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-03-10 15:49:55,892 - INFO - 😴 No new data to upload. Waiting...
+2025-03-10 15:50:55,886 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:50:55,888 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:50:55.888455
+2025-03-10 15:50:55,889 - INFO - 🔄 Deleting images older than 2025-03-10 15:49:55...
+2025-03-10 15:50:55,889 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:50:55,889 - INFO - 🔄 Deleting 0 images
+2025-03-10 15:50:55,890 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:50:55,918 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:37:24
+2025-03-10 15:50:55,919 - INFO - ⏳ Uploading data from 2025-03-10 15:37:24 to 2025-03-10 15:49:00
+2025-03-10 15:50:55,919 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 15:51:55,899 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:51:55.899613
+2025-03-10 15:51:55,901 - INFO - 🔄 Deleting images older than 2025-03-10 15:50:55...
+2025-03-10 15:51:55,901 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:51:55,902 - INFO - 🔄 Deleting 0 images
+2025-03-10 15:51:55,902 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:51:55,926 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:51:55,962 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:37:24
+2025-03-10 15:51:55,962 - INFO - ⏳ Uploading data from 2025-03-10 15:37:24 to 2025-03-10 15:50:00
+2025-03-10 15:51:55,963 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 15:52:49,095 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:52:49,096 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:52:49.096717
+2025-03-10 15:52:49,097 - INFO - 🔄 Deleting images older than 2025-03-10 15:51:49...
+2025-03-10 15:52:49,097 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:52:49,118 - INFO - 🔄 Deleting 0 images
+2025-03-10 15:52:49,118 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:52:49,119 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-03-10 15:52:49,119 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-03-10 15:52:49,119 - INFO - 😴 No new data to upload. Waiting...
+2025-03-10 15:53:49,128 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:53:49.128183
+2025-03-10 15:53:49,130 - INFO - 🔄 Deleting images older than 2025-03-10 15:52:49...
+2025-03-10 15:53:49,130 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:53:49,130 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:53:49,131 - INFO - 🔄 Deleting 0 images
+2025-03-10 15:53:49,132 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:53:49,197 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:37:24
+2025-03-10 15:53:49,198 - INFO - ⏳ Uploading data from 2025-03-10 15:37:24 to 2025-03-10 15:52:00
+2025-03-10 15:53:49,198 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 15:54:49,140 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:54:49.140229
+2025-03-10 15:54:49,141 - INFO - 🔄 Deleting images older than 2025-03-10 15:53:49...
+2025-03-10 15:54:49,141 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:54:49,141 - INFO - 🔄 Deleting 0 images
+2025-03-10 15:54:49,142 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:54:49,206 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:54:49,241 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:37:24
+2025-03-10 15:54:49,241 - INFO - ⏳ Uploading data from 2025-03-10 15:37:24 to 2025-03-10 15:53:00
+2025-03-10 15:54:49,242 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 15:55:49,145 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:55:49.145835
+2025-03-10 15:55:49,146 - INFO - 🔄 Deleting images older than 2025-03-10 15:54:49...
+2025-03-10 15:55:49,146 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:55:49,146 - INFO - 🔄 Deleting 71 images
+2025-03-10 15:55:49,213 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:55:49,244 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:55:49,268 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:37:24
+2025-03-10 15:55:49,268 - INFO - ⏳ Uploading data from 2025-03-10 15:37:24 to 2025-03-10 15:54:00
+2025-03-10 15:55:49,269 - INFO - 🔄 Found 135 new detections to upload
+2025-03-10 15:55:49,370 - INFO - ✅ Data from 2025-03-10 15:37:24 to 2025-03-10 15:54:00 uploaded and deleting
+2025-03-10 15:56:49,221 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:56:49.221798
+2025-03-10 15:56:49,222 - INFO - 🔄 Deleting images older than 2025-03-10 15:55:49...
+2025-03-10 15:56:49,222 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:56:49,222 - INFO - 🔄 Deleting 0 images
+2025-03-10 15:56:49,222 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:56:49,379 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:56:49,413 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:53:59
+2025-03-10 15:56:49,414 - INFO - ⏳ Uploading data from 2025-03-10 15:53:59 to 2025-03-10 15:55:00
+2025-03-10 15:56:49,415 - INFO - 🔄 Found 2 new detections to upload
+2025-03-10 15:56:49,450 - INFO - ✅ Data from 2025-03-10 15:53:59 to 2025-03-10 15:55:00 uploaded and deleting
+2025-03-10 15:57:49,230 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 15:57:49.230342
+2025-03-10 15:57:49,231 - INFO - 🔄 Deleting images older than 2025-03-10 15:56:49...
+2025-03-10 15:57:49,231 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 15:57:49,231 - INFO - 🔄 Deleting 0 images
+2025-03-10 15:57:49,231 - INFO - ✅ Old images deleted successfully
+2025-03-10 15:57:49,460 - INFO - 🔄 Getting last upload time...
+2025-03-10 15:57:49,494 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:54:00
+2025-03-10 15:57:49,494 - INFO - ⏳ Uploading data from 2025-03-10 15:54:00 to 2025-03-10 15:56:00
+2025-03-10 15:57:49,495 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 16:12:46,231 - INFO - 🔄 Getting last upload time...
+2025-03-10 16:12:46,231 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 16:12:46.231762
+2025-03-10 16:12:46,232 - INFO - 🔄 Deleting images older than 2025-03-10 16:11:46...
+2025-03-10 16:12:46,232 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 16:12:46,254 - INFO - 🔄 Deleting 0 images
+2025-03-10 16:12:46,254 - INFO - ✅ Old images deleted successfully
+2025-03-10 16:12:46,275 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-03-10 16:12:46,275 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-03-10 16:12:46,275 - INFO - 😴 No new data to upload. Waiting...
+2025-03-10 16:13:46,261 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 16:13:46.261011
+2025-03-10 16:13:46,261 - INFO - 🔄 Deleting images older than 2025-03-10 16:12:46...
+2025-03-10 16:13:46,261 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 16:13:46,261 - INFO - 🔄 Deleting 0 images
+2025-03-10 16:13:46,261 - INFO - ✅ Old images deleted successfully
+2025-03-10 16:13:46,281 - INFO - 🔄 Getting last upload time...
+2025-03-10 16:13:46,309 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:54:00
+2025-03-10 16:13:46,309 - INFO - ⏳ Uploading data from 2025-03-10 15:54:00 to 2025-03-10 16:12:00
+2025-03-10 16:13:46,309 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 16:14:46,267 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 16:14:46.267939
+2025-03-10 16:14:46,268 - INFO - 🔄 Deleting images older than 2025-03-10 16:13:46...
+2025-03-10 16:14:46,268 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 16:14:46,269 - INFO - 🔄 Deleting 202 images
+2025-03-10 16:14:46,314 - INFO - 🔄 Getting last upload time...
+2025-03-10 16:14:46,373 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:54:00
+2025-03-10 16:14:46,373 - INFO - ⏳ Uploading data from 2025-03-10 15:54:00 to 2025-03-10 16:13:00
+2025-03-10 16:14:46,379 - INFO - ✅ Old images deleted successfully
+2025-03-10 16:14:46,381 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 16:15:46,387 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 16:15:46.387091
+2025-03-10 16:15:46,387 - INFO - 🔄 Deleting images older than 2025-03-10 16:14:46...
+2025-03-10 16:15:46,388 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 16:15:46,388 - INFO - 🔄 Getting last upload time...
+2025-03-10 16:15:46,390 - INFO - 🔄 Deleting 515 images
+2025-03-10 16:15:46,441 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 15:54:00
+2025-03-10 16:15:46,441 - INFO - ⏳ Uploading data from 2025-03-10 15:54:00 to 2025-03-10 16:14:00
+2025-03-10 16:15:46,629 - INFO - ✅ Old images deleted successfully
+2025-03-10 16:15:46,643 - INFO - 🔄 Found 370 new detections to upload
+2025-03-10 16:15:47,061 - INFO - ✅ Data from 2025-03-10 15:54:00 to 2025-03-10 16:14:00 uploaded and deleting
+2025-03-10 16:16:46,637 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 16:16:46.637787
+2025-03-10 16:16:46,638 - INFO - 🔄 Deleting images older than 2025-03-10 16:15:46...
+2025-03-10 16:16:46,638 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 16:16:46,641 - INFO - 🔄 Deleting 0 images
+2025-03-10 16:16:46,641 - INFO - ✅ Old images deleted successfully
+2025-03-10 16:16:47,076 - INFO - 🔄 Getting last upload time...
+2025-03-10 16:16:47,140 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:13:46
+2025-03-10 16:16:47,140 - INFO - ⏳ Uploading data from 2025-03-10 16:13:46 to 2025-03-10 16:15:00
+2025-03-10 16:16:47,146 - INFO - 🔄 Found 825 new detections to upload
+2025-03-10 16:16:48,423 - INFO - ✅ Data from 2025-03-10 16:13:46 to 2025-03-10 16:15:00 uploaded and deleting
+2025-03-10 16:17:46,651 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 16:17:46.651550
+2025-03-10 16:17:46,652 - INFO - 🔄 Deleting images older than 2025-03-10 16:16:46...
+2025-03-10 16:17:46,652 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 16:17:46,652 - INFO - 🔄 Deleting 0 images
+2025-03-10 16:17:46,652 - INFO - ✅ Old images deleted successfully
+2025-03-10 16:17:48,449 - INFO - 🔄 Getting last upload time...
+2025-03-10 16:17:48,486 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 16:17:48,486 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 16:16:00
+2025-03-10 16:17:48,487 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:37:29,483 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:37:29,484 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:37:29.484779
+2025-03-10 21:37:29,485 - INFO - 🔄 Deleting images older than 2025-03-10 21:36:29...
+2025-03-10 21:37:29,485 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:37:29,486 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:37:29,487 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-03-10 21:37:29,487 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-03-10 21:37:29,488 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:37:29,488 - ERROR - ❌ An unexpected error occurred: minute must be in 0..59
+2025-03-10 21:37:29,490 - ERROR - ❌ Alert could not be sent due to network error: {'timestamp': '2025-03-10 21:37:29', 'vehicle_id': 'SYSTEM', 'x_position': 0, 'y_position': 0, 'alert': 'send_hourly_data FAILED.'}
+2025-03-10 21:38:29,498 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:38:29.498438
+2025-03-10 21:38:29,499 - INFO - 🔄 Deleting images older than 2025-03-10 21:37:29...
+2025-03-10 21:38:29,500 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:38:29,500 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:38:29,503 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:38:29,505 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:38:29,737 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:38:29,739 - ERROR - ❌ An unexpected error occurred: minute must be in 0..59
+2025-03-10 21:38:29,741 - INFO - 🔔 Alert sent successfully: {'timestamp': '2025-03-10 21:38:29', 'vehicle_id': 'SYSTEM', 'x_position': 0, 'y_position': 0, 'alert': 'send_hourly_data FAILED.'}
+2025-03-10 21:39:01,695 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:39:01,696 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:39:01.696656
+2025-03-10 21:39:01,697 - INFO - 🔄 Deleting images older than 2025-03-10 21:38:01...
+2025-03-10 21:39:01,697 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:39:01,698 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:39:01,700 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-03-10 21:39:01,700 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-03-10 21:39:01,700 - INFO - 😴 No new data to upload. Waiting...
+2025-03-10 21:39:01,701 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:40:01,707 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:40:01,708 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:40:01.708206
+2025-03-10 21:40:01,708 - INFO - 🔄 Deleting images older than 2025-03-10 21:39:01...
+2025-03-10 21:40:01,708 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:40:01,709 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:40:01,710 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:40:01,919 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:40:01,919 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:39:00
+2025-03-10 21:40:01,922 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:41:01,721 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:41:01.721790
+2025-03-10 21:41:01,722 - INFO - 🔄 Deleting images older than 2025-03-10 21:40:01...
+2025-03-10 21:41:01,722 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:41:01,724 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:41:01,725 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:41:01,931 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:41:02,158 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:41:02,158 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:40:00
+2025-03-10 21:41:02,162 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:42:01,735 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:42:01.735614
+2025-03-10 21:42:01,736 - INFO - 🔄 Deleting images older than 2025-03-10 21:41:01...
+2025-03-10 21:42:01,736 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:42:01,738 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:42:01,739 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:42:02,168 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:42:02,387 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:42:02,387 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:41:00
+2025-03-10 21:42:02,389 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:43:01,750 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:43:01.750325
+2025-03-10 21:43:01,751 - INFO - 🔄 Deleting images older than 2025-03-10 21:42:01...
+2025-03-10 21:43:01,751 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:43:01,803 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:43:01,804 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:43:02,397 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:43:02,669 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:43:02,669 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:42:00
+2025-03-10 21:43:02,675 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:44:01,807 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:44:01.807861
+2025-03-10 21:44:01,808 - INFO - 🔄 Deleting images older than 2025-03-10 21:43:01...
+2025-03-10 21:44:01,808 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:44:01,809 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:44:01,810 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:44:02,681 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:44:02,922 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:44:02,922 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:43:00
+2025-03-10 21:44:02,925 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:45:01,818 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:45:01.818600
+2025-03-10 21:45:01,819 - INFO - 🔄 Deleting images older than 2025-03-10 21:44:01...
+2025-03-10 21:45:01,819 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:45:01,820 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:45:01,821 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:45:02,928 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:45:03,198 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:45:03,198 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:44:00
+2025-03-10 21:45:03,203 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:46:01,831 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:46:01.831423
+2025-03-10 21:46:01,832 - INFO - 🔄 Deleting images older than 2025-03-10 21:45:01...
+2025-03-10 21:46:01,832 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:46:01,836 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:46:01,838 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:46:03,209 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:46:03,477 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:46:03,478 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:45:00
+2025-03-10 21:46:03,481 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:47:01,846 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:47:01.846624
+2025-03-10 21:47:01,847 - INFO - 🔄 Deleting images older than 2025-03-10 21:46:01...
+2025-03-10 21:47:01,847 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:47:01,850 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:47:01,851 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:47:03,484 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:47:03,756 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:47:03,756 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:46:00
+2025-03-10 21:47:03,761 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:48:01,866 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:48:01.866743
+2025-03-10 21:48:01,867 - INFO - 🔄 Deleting images older than 2025-03-10 21:47:01...
+2025-03-10 21:48:01,870 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:48:01,872 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:48:01,875 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:48:03,769 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:48:04,020 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:48:04,021 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:47:00
+2025-03-10 21:48:04,025 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:49:01,879 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:49:01.879369
+2025-03-10 21:49:01,879 - INFO - 🔄 Deleting images older than 2025-03-10 21:48:01...
+2025-03-10 21:49:01,879 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:49:01,882 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:49:01,882 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:49:04,035 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:49:04,310 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:49:04,310 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:48:00
+2025-03-10 21:49:04,314 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:50:01,892 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:50:01.892248
+2025-03-10 21:50:01,893 - INFO - 🔄 Deleting images older than 2025-03-10 21:49:01...
+2025-03-10 21:50:01,893 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:50:01,896 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:50:01,898 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:50:04,323 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:50:04,584 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:50:04,584 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:49:00
+2025-03-10 21:50:04,588 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:51:01,907 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:51:01.907343
+2025-03-10 21:51:01,908 - INFO - 🔄 Deleting images older than 2025-03-10 21:50:01...
+2025-03-10 21:51:01,908 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:51:01,911 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:51:01,913 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:51:04,596 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:51:04,869 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:51:04,870 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:50:00
+2025-03-10 21:51:04,874 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:52:01,916 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:52:01.916444
+2025-03-10 21:52:01,917 - INFO - 🔄 Deleting images older than 2025-03-10 21:51:01...
+2025-03-10 21:52:01,917 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:52:01,919 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:52:01,920 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:52:04,884 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:52:05,149 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:52:05,150 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:51:00
+2025-03-10 21:52:05,154 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:53:01,925 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:53:01.925197
+2025-03-10 21:53:01,925 - INFO - 🔄 Deleting images older than 2025-03-10 21:52:01...
+2025-03-10 21:53:01,925 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:53:01,927 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:53:01,928 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:53:05,161 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:53:05,419 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:53:05,419 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:52:00
+2025-03-10 21:53:05,425 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:54:01,936 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:54:01.936145
+2025-03-10 21:54:01,936 - INFO - 🔄 Deleting images older than 2025-03-10 21:53:01...
+2025-03-10 21:54:01,936 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:54:01,938 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:54:01,939 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:54:05,433 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:54:05,696 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:54:05,696 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:53:00
+2025-03-10 21:54:05,700 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:55:01,949 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:55:01.949869
+2025-03-10 21:55:01,950 - INFO - 🔄 Deleting images older than 2025-03-10 21:54:01...
+2025-03-10 21:55:01,951 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:55:02,001 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:55:02,002 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:55:05,709 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:55:05,984 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:55:05,985 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:54:00
+2025-03-10 21:55:05,988 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:56:02,010 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:56:02.010663
+2025-03-10 21:56:02,011 - INFO - 🔄 Deleting images older than 2025-03-10 21:55:02...
+2025-03-10 21:56:02,011 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:56:02,015 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:56:02,016 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:56:05,997 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:56:06,267 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:56:06,268 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:55:00
+2025-03-10 21:56:06,272 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:57:02,024 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:57:02.024719
+2025-03-10 21:57:02,025 - INFO - 🔄 Deleting images older than 2025-03-10 21:56:02...
+2025-03-10 21:57:02,025 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:57:02,027 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:57:02,028 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:57:06,275 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:57:06,534 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:57:06,535 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:56:00
+2025-03-10 21:57:06,540 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:58:02,033 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:58:02.033643
+2025-03-10 21:58:02,034 - INFO - 🔄 Deleting images older than 2025-03-10 21:57:02...
+2025-03-10 21:58:02,034 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:58:02,038 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:58:02,040 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:58:06,542 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:58:06,800 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:58:06,800 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:57:00
+2025-03-10 21:58:06,803 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 21:59:02,047 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 21:59:02.047669
+2025-03-10 21:59:02,048 - INFO - 🔄 Deleting images older than 2025-03-10 21:58:02...
+2025-03-10 21:59:02,048 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 21:59:02,130 - INFO - 🔄 Deleting 0 images
+2025-03-10 21:59:02,131 - INFO - ✅ Old images deleted successfully
+2025-03-10 21:59:06,811 - INFO - 🔄 Getting last upload time...
+2025-03-10 21:59:07,078 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 21:59:07,078 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 21:58:00
+2025-03-10 21:59:07,083 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:00:02,137 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:00:02.137879
+2025-03-10 22:00:02,138 - INFO - 🔄 Deleting images older than 2025-03-10 21:59:02...
+2025-03-10 22:00:02,138 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:00:02,139 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:00:02,140 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:00:07,091 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:00:07,345 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:00:07,346 - ERROR - ❌ An unexpected error occurred: minute must be in 0..59
+2025-03-10 22:00:07,350 - INFO - 🔔 Alert sent successfully: {'timestamp': '2025-03-10 22:00:07', 'vehicle_id': 'SYSTEM', 'x_position': 0, 'y_position': 0, 'alert': 'send_hourly_data FAILED.'}
+2025-03-10 22:01:02,149 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:01:02.149625
+2025-03-10 22:01:02,150 - INFO - 🔄 Deleting images older than 2025-03-10 22:00:02...
+2025-03-10 22:01:02,150 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:01:02,205 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:01:02,206 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:01:07,360 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:01:07,628 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:01:07,628 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:00:00
+2025-03-10 22:01:07,634 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:02:02,213 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:02:02.213256
+2025-03-10 22:02:02,213 - INFO - 🔄 Deleting images older than 2025-03-10 22:01:02...
+2025-03-10 22:02:02,214 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:02:02,215 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:02:02,216 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:02:07,643 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:02:07,918 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:02:07,918 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:01:00
+2025-03-10 22:02:07,922 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:03:02,219 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:03:02.219774
+2025-03-10 22:03:02,220 - INFO - 🔄 Deleting images older than 2025-03-10 22:02:02...
+2025-03-10 22:03:02,220 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:03:02,267 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:03:02,268 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:03:07,931 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:03:08,203 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:03:08,203 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:02:00
+2025-03-10 22:03:08,208 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:04:02,275 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:04:02.275238
+2025-03-10 22:04:02,275 - INFO - 🔄 Deleting images older than 2025-03-10 22:03:02...
+2025-03-10 22:04:02,275 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:04:02,323 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:04:02,323 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:04:08,214 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:04:08,479 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:04:08,479 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:03:00
+2025-03-10 22:04:08,484 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:05:02,333 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:05:02.333482
+2025-03-10 22:05:02,334 - INFO - 🔄 Deleting images older than 2025-03-10 22:04:02...
+2025-03-10 22:05:02,335 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:05:02,338 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:05:02,340 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:05:08,486 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:05:08,728 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:05:08,728 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:04:00
+2025-03-10 22:05:08,730 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:06:02,350 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:06:02.350077
+2025-03-10 22:06:02,351 - INFO - 🔄 Deleting images older than 2025-03-10 22:05:02...
+2025-03-10 22:06:02,351 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:06:02,355 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:06:02,356 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:06:08,738 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:06:09,007 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:06:09,008 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:05:00
+2025-03-10 22:06:09,011 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:07:02,363 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:07:02.363734
+2025-03-10 22:07:02,364 - INFO - 🔄 Deleting images older than 2025-03-10 22:06:02...
+2025-03-10 22:07:02,364 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:07:02,366 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:07:02,366 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:07:09,021 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:07:09,292 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:07:09,293 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:06:00
+2025-03-10 22:07:09,348 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:08:02,376 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:08:02.376187
+2025-03-10 22:08:02,377 - INFO - 🔄 Deleting images older than 2025-03-10 22:07:02...
+2025-03-10 22:08:02,377 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:08:02,380 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:08:02,382 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:08:09,357 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:08:09,579 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:08:09,580 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:07:00
+2025-03-10 22:08:09,583 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:09:02,389 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:09:02.389675
+2025-03-10 22:09:02,390 - INFO - 🔄 Deleting images older than 2025-03-10 22:08:02...
+2025-03-10 22:09:02,390 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:09:02,440 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:09:02,441 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:09:09,593 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:09:09,863 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:09:09,864 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:08:00
+2025-03-10 22:09:09,869 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:10:02,450 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:10:02.450735
+2025-03-10 22:10:02,451 - INFO - 🔄 Deleting images older than 2025-03-10 22:09:02...
+2025-03-10 22:10:02,451 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:10:02,455 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:10:02,456 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:10:09,875 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:10:10,134 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:10:10,134 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:09:00
+2025-03-10 22:10:10,141 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:11:02,464 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:11:02.464458
+2025-03-10 22:11:02,465 - INFO - 🔄 Deleting images older than 2025-03-10 22:10:02...
+2025-03-10 22:11:02,465 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:11:02,521 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:11:02,521 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:11:10,150 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:11:10,378 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:11:10,378 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:10:00
+2025-03-10 22:11:10,383 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:12:02,530 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:12:02.530349
+2025-03-10 22:12:02,531 - INFO - 🔄 Deleting images older than 2025-03-10 22:11:02...
+2025-03-10 22:12:02,531 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:12:02,534 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:12:02,535 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:12:10,392 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:12:10,656 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:12:10,656 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:11:00
+2025-03-10 22:12:10,661 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:13:02,545 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:13:02.545189
+2025-03-10 22:13:02,546 - INFO - 🔄 Deleting images older than 2025-03-10 22:12:02...
+2025-03-10 22:13:02,546 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:13:02,597 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:13:02,598 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:13:10,668 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:13:10,893 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:13:10,894 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:12:00
+2025-03-10 22:13:10,899 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:13:22,877 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:13:22,877 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:13:22.877734
+2025-03-10 22:13:22,878 - INFO - 🔄 Deleting images older than 2025-03-10 22:12:22...
+2025-03-10 22:13:22,878 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:13:22,880 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:13:22,880 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-03-10 22:13:22,880 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-03-10 22:13:22,880 - INFO - 😴 No new data to upload. Waiting...
+2025-03-10 22:13:22,881 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:14:22,889 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:14:22,891 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:14:22.891912
+2025-03-10 22:14:22,893 - INFO - 🔄 Deleting images older than 2025-03-10 22:13:22...
+2025-03-10 22:14:22,893 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:14:22,896 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:14:22,897 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:14:23,168 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:14:23,168 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:13:00
+2025-03-10 22:14:23,171 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:15:22,906 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:15:22.906251
+2025-03-10 22:15:22,907 - INFO - 🔄 Deleting images older than 2025-03-10 22:14:22...
+2025-03-10 22:15:22,907 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:15:22,958 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:15:22,959 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:15:23,178 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:15:23,439 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:15:23,440 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:14:00
+2025-03-10 22:15:23,443 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:16:22,969 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:16:22.969145
+2025-03-10 22:16:22,970 - INFO - 🔄 Deleting images older than 2025-03-10 22:15:22...
+2025-03-10 22:16:22,970 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:16:23,019 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:16:23,020 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:16:23,453 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:16:23,720 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:16:23,720 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:15:00
+2025-03-10 22:16:23,725 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:17:23,030 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:17:23.030323
+2025-03-10 22:17:23,031 - INFO - 🔄 Deleting images older than 2025-03-10 22:16:23...
+2025-03-10 22:17:23,031 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:17:23,082 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:17:23,083 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:17:23,730 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:17:23,999 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:17:23,999 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:16:00
+2025-03-10 22:17:24,005 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:18:23,093 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:18:23.093629
+2025-03-10 22:18:23,094 - INFO - 🔄 Deleting images older than 2025-03-10 22:17:23...
+2025-03-10 22:18:23,094 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:18:23,146 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:18:23,147 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:18:24,011 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:18:24,265 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:18:24,266 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:17:00
+2025-03-10 22:18:24,271 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:19:23,156 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:19:23.156458
+2025-03-10 22:19:23,157 - INFO - 🔄 Deleting images older than 2025-03-10 22:18:23...
+2025-03-10 22:19:23,157 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:19:23,159 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:19:23,160 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:19:24,279 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:19:24,550 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:19:24,551 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:18:00
+2025-03-10 22:19:24,556 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:20:23,170 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:20:23.170477
+2025-03-10 22:20:23,171 - INFO - 🔄 Deleting images older than 2025-03-10 22:19:23...
+2025-03-10 22:20:23,171 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:20:23,223 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:20:23,224 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:20:24,564 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:20:24,836 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:20:24,836 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:19:00
+2025-03-10 22:20:24,840 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:21:23,233 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:21:23.233472
+2025-03-10 22:21:23,234 - INFO - 🔄 Deleting images older than 2025-03-10 22:20:23...
+2025-03-10 22:21:23,234 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:21:23,287 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:21:23,287 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:21:24,849 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:21:25,126 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:21:25,126 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:20:00
+2025-03-10 22:21:25,132 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:22:23,297 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:22:23.297366
+2025-03-10 22:22:23,298 - INFO - 🔄 Deleting images older than 2025-03-10 22:21:23...
+2025-03-10 22:22:23,298 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:22:23,303 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:22:23,304 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:22:25,136 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:22:25,398 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:22:25,398 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:21:00
+2025-03-10 22:22:25,403 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:23:23,313 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:23:23.313810
+2025-03-10 22:23:23,315 - INFO - 🔄 Deleting images older than 2025-03-10 22:22:23...
+2025-03-10 22:23:23,315 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:23:23,318 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:23:23,320 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:23:25,412 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:23:25,670 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:23:25,670 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:22:00
+2025-03-10 22:23:25,672 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:24:23,327 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:24:23.327140
+2025-03-10 22:24:23,327 - INFO - 🔄 Deleting images older than 2025-03-10 22:23:23...
+2025-03-10 22:24:23,327 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:24:23,329 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:24:23,329 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:24:25,681 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:24:25,954 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:24:25,955 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:23:00
+2025-03-10 22:24:26,008 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:25:23,339 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:25:23.339813
+2025-03-10 22:25:23,340 - INFO - 🔄 Deleting images older than 2025-03-10 22:24:23...
+2025-03-10 22:25:23,341 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:25:23,391 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:25:23,392 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:25:26,016 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:25:26,283 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:25:26,283 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:24:00
+2025-03-10 22:25:26,288 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:26:23,401 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:26:23.401531
+2025-03-10 22:26:23,402 - INFO - 🔄 Deleting images older than 2025-03-10 22:25:23...
+2025-03-10 22:26:23,402 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:26:23,452 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:26:23,452 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:26:26,296 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:26:26,549 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:26:26,549 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:25:00
+2025-03-10 22:26:26,552 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:27:23,461 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:27:23.461300
+2025-03-10 22:27:23,462 - INFO - 🔄 Deleting images older than 2025-03-10 22:26:23...
+2025-03-10 22:27:23,462 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:27:23,465 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:27:23,466 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:27:26,561 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:27:26,826 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:27:26,826 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:26:00
+2025-03-10 22:27:26,831 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:28:23,475 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:28:23.475021
+2025-03-10 22:28:23,475 - INFO - 🔄 Deleting images older than 2025-03-10 22:27:23...
+2025-03-10 22:28:23,475 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:28:23,525 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:28:23,525 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:28:26,839 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:28:27,118 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:28:27,119 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:27:00
+2025-03-10 22:28:27,124 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:29:23,535 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:29:23.535868
+2025-03-10 22:29:23,537 - INFO - 🔄 Deleting images older than 2025-03-10 22:28:23...
+2025-03-10 22:29:23,537 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:29:23,589 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:29:23,590 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:29:27,132 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:29:27,397 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:29:27,397 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:28:00
+2025-03-10 22:29:27,401 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:30:23,594 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:30:23.594440
+2025-03-10 22:30:23,595 - INFO - 🔄 Deleting images older than 2025-03-10 22:29:23...
+2025-03-10 22:30:23,595 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:30:23,647 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:30:23,648 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:30:27,406 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:30:27,677 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:30:27,678 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:29:00
+2025-03-10 22:30:27,682 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:31:23,657 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:31:23.657292
+2025-03-10 22:31:23,658 - INFO - 🔄 Deleting images older than 2025-03-10 22:30:23...
+2025-03-10 22:31:23,658 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:31:23,661 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:31:23,663 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:31:27,690 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:31:27,957 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:31:27,957 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:30:00
+2025-03-10 22:31:27,961 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:32:23,671 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:32:23.671631
+2025-03-10 22:32:23,672 - INFO - 🔄 Deleting images older than 2025-03-10 22:31:23...
+2025-03-10 22:32:23,672 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:32:23,724 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:32:23,725 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:32:27,969 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:32:28,238 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:32:28,238 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:31:00
+2025-03-10 22:32:28,242 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:33:23,733 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:33:23.733619
+2025-03-10 22:33:23,734 - INFO - 🔄 Deleting images older than 2025-03-10 22:32:23...
+2025-03-10 22:33:23,734 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:33:23,736 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:33:23,737 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:33:28,249 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:33:28,515 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:33:28,516 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:32:00
+2025-03-10 22:33:28,520 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:34:23,745 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:34:23.745031
+2025-03-10 22:34:23,746 - INFO - 🔄 Deleting images older than 2025-03-10 22:33:23...
+2025-03-10 22:34:23,746 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:34:23,749 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:34:23,751 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:34:28,528 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:34:28,790 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:34:28,790 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:33:00
+2025-03-10 22:34:28,795 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:35:23,756 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:35:23.756175
+2025-03-10 22:35:23,757 - INFO - 🔄 Deleting images older than 2025-03-10 22:34:23...
+2025-03-10 22:35:23,757 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:35:23,761 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:35:23,762 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:35:28,803 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:35:29,072 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:35:29,072 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:34:00
+2025-03-10 22:35:29,077 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:36:23,770 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:36:23.770466
+2025-03-10 22:36:23,771 - INFO - 🔄 Deleting images older than 2025-03-10 22:35:23...
+2025-03-10 22:36:23,771 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:36:23,820 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:36:23,821 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:36:29,083 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:36:29,340 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:36:29,340 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:35:00
+2025-03-10 22:36:29,342 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:37:23,831 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:37:23.830916
+2025-03-10 22:37:23,832 - INFO - 🔄 Deleting images older than 2025-03-10 22:36:23...
+2025-03-10 22:37:23,832 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:37:23,884 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:37:23,884 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:37:29,351 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:37:29,623 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:37:29,623 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:36:00
+2025-03-10 22:37:29,627 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:38:23,892 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:38:23.892052
+2025-03-10 22:38:23,893 - INFO - 🔄 Deleting images older than 2025-03-10 22:37:23...
+2025-03-10 22:38:23,893 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:38:23,944 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:38:23,945 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:38:29,636 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:38:29,912 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:38:29,913 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:37:00
+2025-03-10 22:38:29,917 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:39:23,954 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:39:23.954576
+2025-03-10 22:39:23,955 - INFO - 🔄 Deleting images older than 2025-03-10 22:38:23...
+2025-03-10 22:39:23,955 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:39:23,958 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:39:23,959 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:39:29,923 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:39:30,174 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:39:30,174 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:38:00
+2025-03-10 22:39:30,239 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:40:23,968 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:40:23.968577
+2025-03-10 22:40:23,969 - INFO - 🔄 Deleting images older than 2025-03-10 22:39:23...
+2025-03-10 22:40:23,969 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:40:24,018 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:40:24,018 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:40:30,246 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:40:30,499 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:40:30,499 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:39:00
+2025-03-10 22:40:30,502 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:41:24,028 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:41:24.028422
+2025-03-10 22:41:24,029 - INFO - 🔄 Deleting images older than 2025-03-10 22:40:24...
+2025-03-10 22:41:24,029 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:41:24,034 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:41:24,035 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:41:30,509 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:41:30,772 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:41:30,772 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:40:00
+2025-03-10 22:41:30,776 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:42:24,044 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:42:24.044467
+2025-03-10 22:42:24,045 - INFO - 🔄 Deleting images older than 2025-03-10 22:41:24...
+2025-03-10 22:42:24,045 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:42:24,050 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:42:24,051 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:42:30,784 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:42:31,037 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:42:31,037 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:41:00
+2025-03-10 22:42:31,043 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:43:24,061 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:43:24.061178
+2025-03-10 22:43:24,062 - INFO - 🔄 Deleting images older than 2025-03-10 22:42:24...
+2025-03-10 22:43:24,062 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:43:24,114 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:43:24,114 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:43:31,052 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:43:31,324 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:43:31,324 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:42:00
+2025-03-10 22:43:31,329 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:44:24,124 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:44:24.124876
+2025-03-10 22:44:24,126 - INFO - 🔄 Deleting images older than 2025-03-10 22:43:24...
+2025-03-10 22:44:24,126 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:44:24,178 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:44:24,179 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:44:31,336 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:44:31,593 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:44:31,595 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:43:00
+2025-03-10 22:44:31,597 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:45:24,186 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:45:24.186404
+2025-03-10 22:45:24,187 - INFO - 🔄 Deleting images older than 2025-03-10 22:44:24...
+2025-03-10 22:45:24,187 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:45:24,189 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:45:24,190 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:45:31,601 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:45:31,878 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:45:31,878 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:44:00
+2025-03-10 22:45:31,931 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:46:24,199 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:46:24.199251
+2025-03-10 22:46:24,209 - INFO - 🔄 Deleting images older than 2025-03-10 22:45:24...
+2025-03-10 22:46:24,209 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:46:24,335 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:46:24,337 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:46:31,867 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:46:32,133 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:46:32,135 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:45:00
+2025-03-10 22:46:32,193 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:47:24,275 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:47:24.275149
+2025-03-10 22:47:24,276 - INFO - 🔄 Deleting images older than 2025-03-10 22:46:24...
+2025-03-10 22:47:24,276 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:47:24,329 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:47:24,330 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:47:32,201 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:47:32,483 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:47:32,484 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:46:00
+2025-03-10 22:47:32,489 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:48:24,334 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:48:24.334165
+2025-03-10 22:48:24,334 - INFO - 🔄 Deleting images older than 2025-03-10 22:47:24...
+2025-03-10 22:48:24,334 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:48:24,335 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:48:24,336 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:48:32,497 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:48:32,762 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:48:32,763 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:47:00
+2025-03-10 22:48:32,768 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:49:24,343 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:49:24.343538
+2025-03-10 22:49:24,344 - INFO - 🔄 Deleting images older than 2025-03-10 22:48:24...
+2025-03-10 22:49:24,344 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:49:24,347 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:49:24,349 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:49:32,773 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:49:33,038 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:49:33,039 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:48:00
+2025-03-10 22:49:33,042 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:50:24,358 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:50:24.358823
+2025-03-10 22:50:24,360 - INFO - 🔄 Deleting images older than 2025-03-10 22:49:24...
+2025-03-10 22:50:24,360 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:50:24,364 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:50:24,367 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:50:33,048 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:50:33,303 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:50:33,303 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:49:00
+2025-03-10 22:50:33,308 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:51:24,375 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:51:24.375582
+2025-03-10 22:51:24,376 - INFO - 🔄 Deleting images older than 2025-03-10 22:50:24...
+2025-03-10 22:51:24,376 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:51:24,378 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:51:24,379 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:51:33,312 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:51:33,656 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:51:33,656 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:50:00
+2025-03-10 22:51:33,661 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:52:24,387 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:52:24.387830
+2025-03-10 22:52:24,388 - INFO - 🔄 Deleting images older than 2025-03-10 22:51:24...
+2025-03-10 22:52:24,388 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:52:24,441 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:52:24,442 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:52:33,668 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:52:33,935 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:52:33,935 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:51:00
+2025-03-10 22:52:33,939 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:53:24,451 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:53:24.451674
+2025-03-10 22:53:24,452 - INFO - 🔄 Deleting images older than 2025-03-10 22:52:24...
+2025-03-10 22:53:24,453 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:53:24,456 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:53:24,458 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:53:33,943 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:53:34,211 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:53:34,212 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:52:00
+2025-03-10 22:53:34,216 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:55:20,025 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:55:20.025506
+2025-03-10 22:55:20,026 - INFO - 🔄 Deleting images older than 2025-03-10 22:54:20...
+2025-03-10 22:55:20,026 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:55:20,030 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:55:20,032 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:55:29,780 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:55:30,076 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:55:30,076 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:54:00
+2025-03-10 22:55:30,080 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:56:20,041 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:56:20.041533
+2025-03-10 22:56:20,042 - INFO - 🔄 Deleting images older than 2025-03-10 22:55:20...
+2025-03-10 22:56:20,042 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:56:20,044 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:56:20,045 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:56:30,081 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:56:30,334 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:56:30,335 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:55:00
+2025-03-10 22:56:30,338 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:57:20,058 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:57:20.058614
+2025-03-10 22:57:20,059 - INFO - 🔄 Deleting images older than 2025-03-10 22:56:20...
+2025-03-10 22:57:20,059 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:57:20,063 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:57:20,064 - INFO - ✅ Old images deleted successfully
+2025-03-10 22:57:30,349 - INFO - 🔄 Getting last upload time...
+2025-03-10 22:57:30,617 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 22:57:30,617 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 22:56:00
+2025-03-10 22:57:30,619 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 22:58:20,069 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 22:58:20.069314
+2025-03-10 22:58:20,070 - INFO - 🔄 Deleting images older than 2025-03-10 22:57:20...
+2025-03-10 22:58:20,070 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 22:58:20,075 - INFO - 🔄 Deleting 0 images
+2025-03-10 22:58:20,076 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:00:33,213 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:00:34,499 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:00:34,500 - ERROR - ❌ An unexpected error occurred: minute must be in 0..59
+2025-03-10 23:00:34,504 - INFO - 🔔 Alert sent successfully: {'timestamp': '2025-03-10 23:00:34', 'vehicle_id': 'SYSTEM', 'x_position': 0, 'y_position': 0, 'alert': 'send_hourly_data FAILED.'}
+2025-03-10 23:01:22,677 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:01:22.677208
+2025-03-10 23:01:22,678 - INFO - 🔄 Deleting images older than 2025-03-10 23:00:22...
+2025-03-10 23:01:22,678 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:01:22,729 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:01:22,730 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:01:34,511 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:01:34,768 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:01:34,768 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:00:00
+2025-03-10 23:01:34,772 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:02:22,736 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:02:22.736885
+2025-03-10 23:02:22,738 - INFO - 🔄 Deleting images older than 2025-03-10 23:01:22...
+2025-03-10 23:02:22,738 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:02:22,789 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:02:22,790 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:02:34,779 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:02:35,043 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:02:35,043 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:01:00
+2025-03-10 23:02:35,048 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:03:22,798 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:03:22.798200
+2025-03-10 23:03:22,799 - INFO - 🔄 Deleting images older than 2025-03-10 23:02:22...
+2025-03-10 23:03:22,799 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:03:22,851 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:03:22,852 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:03:35,056 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:03:35,321 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:03:35,321 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:02:00
+2025-03-10 23:03:35,326 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:04:22,856 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:04:22.856307
+2025-03-10 23:04:22,856 - INFO - 🔄 Deleting images older than 2025-03-10 23:03:22...
+2025-03-10 23:04:22,857 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:04:22,859 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:04:22,860 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:04:35,331 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:04:35,582 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:04:35,582 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:03:00
+2025-03-10 23:04:35,586 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:05:22,864 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:05:22.864038
+2025-03-10 23:05:22,864 - INFO - 🔄 Deleting images older than 2025-03-10 23:04:22...
+2025-03-10 23:05:22,864 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:05:22,867 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:05:22,868 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:05:35,595 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:05:35,850 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:05:35,850 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:04:00
+2025-03-10 23:05:35,854 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:06:22,874 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:06:22.874251
+2025-03-10 23:06:22,875 - INFO - 🔄 Deleting images older than 2025-03-10 23:05:22...
+2025-03-10 23:06:22,875 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:06:22,936 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:06:22,937 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:06:35,859 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:06:36,098 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:06:36,098 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:05:00
+2025-03-10 23:06:36,102 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:07:22,945 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:07:22.945265
+2025-03-10 23:07:22,946 - INFO - 🔄 Deleting images older than 2025-03-10 23:06:22...
+2025-03-10 23:07:22,946 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:07:23,006 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:07:23,007 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:07:36,105 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:07:36,357 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:07:36,357 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:06:00
+2025-03-10 23:07:36,361 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:08:23,015 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:08:23.015086
+2025-03-10 23:08:23,016 - INFO - 🔄 Deleting images older than 2025-03-10 23:07:23...
+2025-03-10 23:08:23,016 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:08:23,018 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:08:23,019 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:08:36,365 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:08:36,611 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:08:36,612 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:07:00
+2025-03-10 23:08:36,615 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:09:23,036 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:09:23.036520
+2025-03-10 23:09:23,037 - INFO - 🔄 Deleting images older than 2025-03-10 23:08:23...
+2025-03-10 23:09:23,038 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:09:23,098 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:09:23,099 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:09:36,632 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:09:36,886 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:09:36,886 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:08:00
+2025-03-10 23:09:36,948 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:10:23,109 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:10:23.109127
+2025-03-10 23:10:23,110 - INFO - 🔄 Deleting images older than 2025-03-10 23:09:23...
+2025-03-10 23:10:23,110 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:10:23,167 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:10:23,168 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:10:36,956 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:10:37,219 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:10:37,219 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:09:00
+2025-03-10 23:10:37,280 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:11:23,176 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:11:23.175990
+2025-03-10 23:11:23,176 - INFO - 🔄 Deleting images older than 2025-03-10 23:10:23...
+2025-03-10 23:11:23,177 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:11:23,238 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:11:23,238 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:11:37,288 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:11:37,550 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:11:37,551 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:10:00
+2025-03-10 23:11:37,558 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:12:23,245 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:12:23.245877
+2025-03-10 23:12:23,246 - INFO - 🔄 Deleting images older than 2025-03-10 23:11:23...
+2025-03-10 23:12:23,246 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:12:23,248 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:12:23,250 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:12:37,563 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:12:37,825 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:12:37,826 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:11:00
+2025-03-10 23:12:37,882 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:13:23,259 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:13:23.259110
+2025-03-10 23:13:23,260 - INFO - 🔄 Deleting images older than 2025-03-10 23:12:23...
+2025-03-10 23:13:23,261 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:13:23,323 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:13:23,324 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:13:37,889 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:13:38,144 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:13:38,145 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:12:00
+2025-03-10 23:13:38,208 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:14:23,333 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:14:23.333269
+2025-03-10 23:14:23,334 - INFO - 🔄 Deleting images older than 2025-03-10 23:13:23...
+2025-03-10 23:14:23,334 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:14:23,337 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:14:23,339 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:14:38,216 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:14:38,475 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:14:38,475 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:13:00
+2025-03-10 23:14:38,480 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:15:23,342 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:15:23.342553
+2025-03-10 23:15:23,343 - INFO - 🔄 Deleting images older than 2025-03-10 23:14:23...
+2025-03-10 23:15:23,343 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:15:23,345 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:15:23,346 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:15:38,487 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:15:38,748 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:15:38,748 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:14:00
+2025-03-10 23:15:38,753 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:16:23,352 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:16:23.352576
+2025-03-10 23:16:23,354 - INFO - 🔄 Deleting images older than 2025-03-10 23:15:23...
+2025-03-10 23:16:23,354 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:16:23,411 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:16:23,412 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:16:38,761 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:16:39,040 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:16:39,041 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:15:00
+2025-03-10 23:16:39,105 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:17:23,421 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:17:23.421814
+2025-03-10 23:17:23,423 - INFO - 🔄 Deleting images older than 2025-03-10 23:16:23...
+2025-03-10 23:17:23,423 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:17:23,487 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:17:23,488 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:17:39,113 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:17:39,381 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:17:39,381 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:16:00
+2025-03-10 23:17:39,385 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:18:23,496 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:18:23.496678
+2025-03-10 23:18:23,498 - INFO - 🔄 Deleting images older than 2025-03-10 23:17:23...
+2025-03-10 23:18:23,498 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:18:23,562 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:18:23,563 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:18:39,389 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:18:39,649 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:18:39,649 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:17:00
+2025-03-10 23:18:39,652 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:19:23,572 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:19:23.572528
+2025-03-10 23:19:23,574 - INFO - 🔄 Deleting images older than 2025-03-10 23:18:23...
+2025-03-10 23:19:23,574 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:19:23,577 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:19:23,578 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:19:39,658 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:19:39,930 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:19:39,931 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:18:00
+2025-03-10 23:19:39,936 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:20:23,586 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:20:23.586795
+2025-03-10 23:20:23,587 - INFO - 🔄 Deleting images older than 2025-03-10 23:19:23...
+2025-03-10 23:20:23,587 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:20:23,591 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:20:23,593 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:20:39,943 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:20:40,200 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:20:40,200 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:19:00
+2025-03-10 23:20:40,203 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:21:23,597 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:21:23.597736
+2025-03-10 23:21:23,599 - INFO - 🔄 Deleting images older than 2025-03-10 23:20:23...
+2025-03-10 23:21:23,599 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:21:23,663 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:21:23,663 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:21:40,210 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:21:40,483 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:21:40,483 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:20:00
+2025-03-10 23:21:40,555 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:22:23,672 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:22:23.672742
+2025-03-10 23:22:23,673 - INFO - 🔄 Deleting images older than 2025-03-10 23:21:23...
+2025-03-10 23:22:23,673 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:22:23,677 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:22:23,678 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:22:40,558 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:22:40,824 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:22:40,824 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:21:00
+2025-03-10 23:22:40,827 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:23:23,684 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:23:23.684397
+2025-03-10 23:23:23,685 - INFO - 🔄 Deleting images older than 2025-03-10 23:22:23...
+2025-03-10 23:23:23,685 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:23:23,689 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:23:23,690 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:23:40,835 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:23:41,089 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:23:41,089 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:22:00
+2025-03-10 23:23:41,142 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:24:23,694 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:24:23.694677
+2025-03-10 23:24:23,695 - INFO - 🔄 Deleting images older than 2025-03-10 23:23:23...
+2025-03-10 23:24:23,695 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:24:23,697 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:24:23,698 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:24:41,151 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:24:41,427 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:24:41,427 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:23:00
+2025-03-10 23:24:41,432 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:25:23,702 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:25:23.702485
+2025-03-10 23:25:23,703 - INFO - 🔄 Deleting images older than 2025-03-10 23:24:23...
+2025-03-10 23:25:23,703 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:25:23,706 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:25:23,707 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:25:41,435 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:25:41,718 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:25:41,718 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:24:00
+2025-03-10 23:25:41,771 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:26:23,715 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:26:23.715794
+2025-03-10 23:26:23,717 - INFO - 🔄 Deleting images older than 2025-03-10 23:25:23...
+2025-03-10 23:26:23,717 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:26:23,785 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:26:23,786 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:26:41,778 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:26:42,026 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:26:42,026 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:25:00
+2025-03-10 23:26:42,089 - INFO - 🔄 Found 0 new detections to upload
+2025-03-10 23:27:23,797 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-10 23:27:23.797326
+2025-03-10 23:27:23,798 - INFO - 🔄 Deleting images older than 2025-03-10 23:26:23...
+2025-03-10 23:27:23,798 - INFO - ✅ Keep contrary images are disabled
+2025-03-10 23:27:23,856 - INFO - 🔄 Deleting 0 images
+2025-03-10 23:27:23,856 - INFO - ✅ Old images deleted successfully
+2025-03-10 23:27:42,105 - INFO - 🔄 Getting last upload time...
+2025-03-10 23:27:42,362 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-10 23:27:42,363 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-10 23:26:00
+2025-03-10 23:27:42,366 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 00:50:18,457 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 00:50:18.457308
+2025-03-11 00:50:18,458 - INFO - 🔄 Deleting images older than 2025-03-11 00:49:18...
+2025-03-11 00:50:18,458 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 00:50:18,530 - INFO - 🔄 Deleting 0 images
+2025-03-11 00:50:18,530 - INFO - ✅ Old images deleted successfully
+2025-03-11 01:28:11,438 - INFO - 🔄 Getting last upload time...
+2025-03-11 01:28:12,913 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 01:28:12,913 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 01:27:00
+2025-03-11 01:28:12,979 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 05:32:21,450 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 05:32:21.450322
+2025-03-11 05:32:21,452 - INFO - 🔄 Deleting images older than 2025-03-11 05:31:21...
+2025-03-11 05:32:21,452 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 05:32:21,516 - INFO - 🔄 Deleting 0 images
+2025-03-11 05:32:21,517 - INFO - ✅ Old images deleted successfully
+2025-03-11 07:50:10,955 - INFO - 🔄 Getting last upload time...
+2025-03-11 07:50:11,411 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 07:50:11,411 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 07:49:00
+2025-03-11 07:50:11,472 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:03:04,003 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:03:04.003649
+2025-03-11 08:03:04,005 - INFO - 🔄 Deleting images older than 2025-03-11 08:02:04...
+2025-03-11 08:03:04,005 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:03:04,080 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:03:04,081 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:03:24,594 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:03:24,876 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:03:24,876 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:02:00
+2025-03-11 08:03:24,880 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:04:04,245 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:04:04.245051
+2025-03-11 08:04:04,245 - INFO - 🔄 Deleting images older than 2025-03-11 08:03:04...
+2025-03-11 08:04:04,245 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:04:04,247 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:04:04,248 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:06:44,642 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:06:44,882 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:06:44,882 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:05:00
+2025-03-11 08:06:44,943 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:07:24,000 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:07:24.000485
+2025-03-11 08:07:24,001 - INFO - 🔄 Deleting images older than 2025-03-11 08:06:24...
+2025-03-11 08:07:24,001 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:07:24,061 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:07:24,062 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:07:44,944 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:07:45,213 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:07:45,214 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:06:00
+2025-03-11 08:07:45,276 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:08:24,075 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:08:24.075168
+2025-03-11 08:08:24,076 - INFO - 🔄 Deleting images older than 2025-03-11 08:07:24...
+2025-03-11 08:08:24,076 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:08:24,135 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:08:24,136 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:08:45,289 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:08:45,559 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:08:45,559 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:07:00
+2025-03-11 08:08:45,625 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:09:24,150 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:09:24.150282
+2025-03-11 08:09:24,151 - INFO - 🔄 Deleting images older than 2025-03-11 08:08:24...
+2025-03-11 08:09:24,151 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:09:24,212 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:09:24,212 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:24:44,125 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:24:44,954 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:24:44,954 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:23:00
+2025-03-11 08:24:45,017 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:25:22,719 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:25:22.719434
+2025-03-11 08:25:22,722 - INFO - 🔄 Deleting images older than 2025-03-11 08:24:22...
+2025-03-11 08:25:22,722 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:25:22,785 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:25:22,785 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:25:45,035 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:25:45,278 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:25:45,279 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:24:00
+2025-03-11 08:25:45,282 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:26:22,798 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:26:22.798199
+2025-03-11 08:26:22,799 - INFO - 🔄 Deleting images older than 2025-03-11 08:25:22...
+2025-03-11 08:26:22,799 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:26:22,855 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:26:22,855 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:26:45,285 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:26:45,541 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:26:45,541 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:25:00
+2025-03-11 08:26:45,545 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:27:22,869 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:27:22.869185
+2025-03-11 08:27:22,870 - INFO - 🔄 Deleting images older than 2025-03-11 08:26:22...
+2025-03-11 08:27:22,870 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:27:22,873 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:27:22,875 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:27:45,557 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:27:45,827 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:27:45,827 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:26:00
+2025-03-11 08:27:45,832 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:28:22,878 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:28:22.878554
+2025-03-11 08:28:22,879 - INFO - 🔄 Deleting images older than 2025-03-11 08:27:22...
+2025-03-11 08:28:22,879 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:28:22,882 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:28:22,884 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:28:45,845 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:28:46,104 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:28:46,104 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:27:00
+2025-03-11 08:28:46,108 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:29:22,894 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:29:22.894322
+2025-03-11 08:29:22,895 - INFO - 🔄 Deleting images older than 2025-03-11 08:28:22...
+2025-03-11 08:29:22,895 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:29:22,898 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:29:22,899 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:29:46,120 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:29:46,382 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:29:46,383 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:28:00
+2025-03-11 08:29:46,387 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:30:22,905 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:30:22.905895
+2025-03-11 08:30:22,907 - INFO - 🔄 Deleting images older than 2025-03-11 08:29:22...
+2025-03-11 08:30:22,907 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:30:22,958 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:30:22,958 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:30:46,395 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:30:46,646 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:30:46,647 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:29:00
+2025-03-11 08:30:46,651 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:31:22,970 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:31:22.970911
+2025-03-11 08:31:22,971 - INFO - 🔄 Deleting images older than 2025-03-11 08:30:22...
+2025-03-11 08:31:22,971 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:31:22,974 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:31:22,975 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:31:46,663 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:31:46,898 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:31:46,899 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:30:00
+2025-03-11 08:31:46,903 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:32:22,988 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:32:22.988139
+2025-03-11 08:32:22,989 - INFO - 🔄 Deleting images older than 2025-03-11 08:31:22...
+2025-03-11 08:32:22,989 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:32:23,040 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:32:23,041 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:32:46,908 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:32:47,155 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:32:47,155 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:31:00
+2025-03-11 08:32:47,210 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:33:23,052 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:33:23.052902
+2025-03-11 08:33:23,054 - INFO - 🔄 Deleting images older than 2025-03-11 08:32:23...
+2025-03-11 08:33:23,054 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:33:23,105 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:33:23,105 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:33:47,222 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:33:47,461 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:33:47,462 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:32:00
+2025-03-11 08:33:47,465 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:34:23,118 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:34:23.117925
+2025-03-11 08:34:23,118 - INFO - 🔄 Deleting images older than 2025-03-11 08:33:23...
+2025-03-11 08:34:23,118 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:34:23,122 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:34:23,123 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:34:47,478 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:34:47,718 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:34:47,718 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:33:00
+2025-03-11 08:34:47,771 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:35:23,130 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:35:23.130543
+2025-03-11 08:35:23,131 - INFO - 🔄 Deleting images older than 2025-03-11 08:34:23...
+2025-03-11 08:35:23,131 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:35:23,183 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:35:23,184 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:35:47,783 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:35:48,036 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:35:48,037 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:34:00
+2025-03-11 08:35:48,089 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:36:23,196 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:36:23.196427
+2025-03-11 08:36:23,197 - INFO - 🔄 Deleting images older than 2025-03-11 08:35:23...
+2025-03-11 08:36:23,197 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:36:23,240 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:36:23,241 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:36:48,101 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:36:48,361 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:36:48,361 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:35:00
+2025-03-11 08:36:48,365 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:37:23,253 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:37:23.253224
+2025-03-11 08:37:23,254 - INFO - 🔄 Deleting images older than 2025-03-11 08:36:23...
+2025-03-11 08:37:23,254 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:37:23,257 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:37:23,258 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:37:48,377 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:37:48,629 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:37:48,630 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:36:00
+2025-03-11 08:37:48,682 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:38:23,263 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:38:23.263870
+2025-03-11 08:38:23,265 - INFO - 🔄 Deleting images older than 2025-03-11 08:37:23...
+2025-03-11 08:38:23,265 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:38:23,317 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:38:23,317 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:38:48,695 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:38:48,945 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:38:48,945 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:37:00
+2025-03-11 08:38:48,950 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:39:23,329 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:39:23.329864
+2025-03-11 08:39:23,331 - INFO - 🔄 Deleting images older than 2025-03-11 08:38:23...
+2025-03-11 08:39:23,331 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:39:23,382 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:39:23,382 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:39:48,961 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:39:49,196 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:39:49,196 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:38:00
+2025-03-11 08:39:49,257 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:40:23,395 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:40:23.394995
+2025-03-11 08:40:23,395 - INFO - 🔄 Deleting images older than 2025-03-11 08:39:23...
+2025-03-11 08:40:23,395 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:40:23,399 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:40:23,400 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:40:49,269 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:40:49,522 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:40:49,523 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:39:00
+2025-03-11 08:40:49,526 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 08:48:45,586 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 08:48:45.586703
+2025-03-11 08:48:45,588 - INFO - 🔄 Deleting images older than 2025-03-11 08:47:45...
+2025-03-11 08:48:45,588 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 08:48:45,592 - INFO - 🔄 Deleting 0 images
+2025-03-11 08:48:45,594 - INFO - ✅ Old images deleted successfully
+2025-03-11 08:59:21,079 - INFO - 🔄 Getting last upload time...
+2025-03-11 08:59:21,356 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 08:59:21,356 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 08:58:00
+2025-03-11 08:59:21,360 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 09:01:32,903 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 09:01:32.903218
+2025-03-11 09:01:32,904 - INFO - 🔄 Deleting images older than 2025-03-11 09:00:32...
+2025-03-11 09:01:32,904 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 09:01:32,909 - INFO - 🔄 Deleting 0 images
+2025-03-11 09:01:32,910 - INFO - ✅ Old images deleted successfully
+2025-03-11 09:25:38,707 - INFO - 🔄 Getting last upload time...
+2025-03-11 09:25:39,152 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 09:25:39,152 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 09:24:00
+2025-03-11 09:25:39,157 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 09:35:20,078 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 09:35:20.078363
+2025-03-11 09:35:20,079 - INFO - 🔄 Deleting images older than 2025-03-11 09:34:20...
+2025-03-11 09:35:20,079 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 09:35:20,081 - INFO - 🔄 Deleting 0 images
+2025-03-11 09:35:20,082 - INFO - ✅ Old images deleted successfully
+2025-03-11 12:38:24,561 - INFO - 🔄 Getting last upload time...
+2025-03-11 12:38:25,032 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 12:38:25,032 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 12:37:00
+2025-03-11 12:38:25,036 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 16:42:21,613 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 16:42:21.613084
+2025-03-11 16:42:21,613 - INFO - 🔄 Deleting images older than 2025-03-11 16:41:21...
+2025-03-11 16:42:21,613 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 16:42:21,615 - INFO - 🔄 Deleting 0 images
+2025-03-11 16:42:21,616 - INFO - ✅ Old images deleted successfully
+2025-03-11 17:56:02,907 - INFO - 🔄 Getting last upload time...
+2025-03-11 17:56:03,346 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 17:56:03,346 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 17:55:00
+2025-03-11 17:56:03,395 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 17:56:35,622 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 17:56:35.622840
+2025-03-11 17:56:35,623 - INFO - 🔄 Deleting images older than 2025-03-11 17:55:35...
+2025-03-11 17:56:35,623 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 17:56:35,625 - INFO - 🔄 Deleting 0 images
+2025-03-11 17:56:35,626 - INFO - ✅ Old images deleted successfully
+2025-03-11 17:57:03,412 - INFO - 🔄 Getting last upload time...
+2025-03-11 17:57:03,684 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 17:57:03,684 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 17:56:00
+2025-03-11 17:57:03,690 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 17:57:35,631 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 17:57:35.631479
+2025-03-11 17:57:35,632 - INFO - 🔄 Deleting images older than 2025-03-11 17:56:35...
+2025-03-11 17:57:35,632 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 17:57:35,634 - INFO - 🔄 Deleting 0 images
+2025-03-11 17:57:35,635 - INFO - ✅ Old images deleted successfully
+2025-03-11 19:01:47,295 - INFO - 🔄 Getting last upload time...
+2025-03-11 19:01:49,566 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 19:01:49,566 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 19:00:00
+2025-03-11 19:01:49,568 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 21:04:14,796 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 21:04:14.795787
+2025-03-11 21:04:14,797 - INFO - 🔄 Deleting images older than 2025-03-11 21:03:14...
+2025-03-11 21:04:14,797 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 21:04:14,937 - INFO - 🔄 Deleting 0 images
+2025-03-11 21:04:14,940 - INFO - ✅ Old images deleted successfully
+2025-03-11 21:04:45,096 - INFO - 🔄 Getting last upload time...
+2025-03-11 21:04:45,581 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-03-11 21:04:45,582 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-03-11 21:03:00
+2025-03-11 21:04:45,586 - INFO - 🔄 Found 0 new detections to upload
+2025-03-11 21:05:14,909 - INFO - ⏳ Cleaning up old images..., current time: 2025-03-11 21:05:14.909603
+2025-03-11 21:05:14,910 - INFO - 🔄 Deleting images older than 2025-03-11 21:04:14...
+2025-03-11 21:05:14,910 - INFO - ✅ Keep contrary images are disabled
+2025-03-11 21:05:14,914 - INFO - 🔄 Deleting 0 images
+2025-03-11 21:05:14,915 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:34:46,784 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:34:46,785 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:34:46.785688
+2025-05-07 12:34:46,785 - INFO - 🔄 Deleting images older than 2025-05-07 12:33:46...
+2025-05-07 12:34:46,785 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:34:46,786 - INFO - 🔄 Deleting 18 images
+2025-05-07 12:34:46,870 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 12:34:46,870 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 12:34:46,870 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 12:34:46,906 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:35:46,879 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:35:46,914 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:35:46.914438
+2025-05-07 12:35:46,915 - INFO - 🔄 Deleting images older than 2025-05-07 12:34:46...
+2025-05-07 12:35:46,915 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:35:46,915 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:35:46,915 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:35:47,057 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:14:45
+2025-05-07 12:35:47,057 - INFO - ⏳ Uploading data from 2025-03-10 16:14:45 to 2025-05-07 12:34:00
+2025-05-07 12:35:47,058 - INFO - 🔄 Found 158 new detections to upload
+2025-05-07 12:35:47,846 - INFO - ✅ Data from 2025-03-10 16:14:45 to 2025-05-07 12:34:00 uploaded and deleting
+2025-05-07 12:36:46,923 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:36:46.923059
+2025-05-07 12:36:46,923 - INFO - 🔄 Deleting images older than 2025-05-07 12:35:46...
+2025-05-07 12:36:46,923 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:36:46,924 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:36:46,924 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:36:47,863 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:36:47,981 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:36:47,981 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:35:00
+2025-05-07 12:36:47,982 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 12:37:46,933 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:37:46.933075
+2025-05-07 12:37:46,933 - INFO - 🔄 Deleting images older than 2025-05-07 12:36:46...
+2025-05-07 12:37:46,933 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:37:46,934 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:37:46,934 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:37:47,987 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:37:48,175 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:37:48,175 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:36:00
+2025-05-07 12:37:48,176 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 12:38:46,937 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:38:46.937585
+2025-05-07 12:38:46,938 - INFO - 🔄 Deleting images older than 2025-05-07 12:37:46...
+2025-05-07 12:38:46,938 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:38:46,938 - ERROR - ❌ Error deleting images: no such table: detections
+2025-05-07 12:38:48,184 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:38:48,276 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:38:48,276 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:37:00
+2025-05-07 12:38:48,278 - ERROR - ❌ An unexpected error occurred: no such table: detections
+2025-05-07 12:38:48,283 - INFO - 🔔 Alert sent successfully: {'timestamp': '2025-05-07 12:38:48', 'vehicle_id': 'SYSTEM', 'x_position': 0, 'y_position': 0, 'alert': 'send_hourly_data FAILED.'}
+2025-05-07 12:39:17,161 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:39:17,162 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:39:17.162656
+2025-05-07 12:39:17,163 - INFO - 🔄 Deleting images older than 2025-05-07 12:38:17...
+2025-05-07 12:39:17,163 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:39:17,163 - ERROR - ❌ Error deleting images: no such table: detections
+2025-05-07 12:39:17,169 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 12:39:17,169 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 12:39:17,169 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 12:40:17,171 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:40:17.171236
+2025-05-07 12:40:17,172 - INFO - 🔄 Deleting images older than 2025-05-07 12:39:17...
+2025-05-07 12:40:17,172 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:40:17,172 - ERROR - ❌ Error deleting images: no such table: detections
+2025-05-07 12:40:17,173 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:40:17,280 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:40:17,280 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:39:00
+2025-05-07 12:40:17,281 - ERROR - ❌ An unexpected error occurred: no such table: detections
+2025-05-07 12:40:17,285 - INFO - 🔔 Alert sent successfully: {'timestamp': '2025-05-07 12:40:17', 'vehicle_id': 'SYSTEM', 'x_position': 0, 'y_position': 0, 'alert': 'send_hourly_data FAILED.'}
+2025-05-07 12:41:17,181 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:41:17.181098
+2025-05-07 12:41:17,181 - INFO - 🔄 Deleting images older than 2025-05-07 12:40:17...
+2025-05-07 12:41:17,181 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:41:17,182 - ERROR - ❌ Error deleting images: no such table: detections
+2025-05-07 12:41:17,292 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:41:17,383 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:41:17,383 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:40:00
+2025-05-07 12:41:17,385 - ERROR - ❌ An unexpected error occurred: no such table: detections
+2025-05-07 12:41:17,389 - INFO - 🔔 Alert sent successfully: {'timestamp': '2025-05-07 12:41:17', 'vehicle_id': 'SYSTEM', 'x_position': 0, 'y_position': 0, 'alert': 'send_hourly_data FAILED.'}
+2025-05-07 12:42:17,188 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:42:17.188464
+2025-05-07 12:42:17,189 - INFO - 🔄 Deleting images older than 2025-05-07 12:41:17...
+2025-05-07 12:42:17,189 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:42:17,189 - ERROR - ❌ Error deleting images: no such table: detections
+2025-05-07 12:42:17,398 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:42:17,504 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:42:17,504 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:41:00
+2025-05-07 12:42:17,508 - ERROR - ❌ An unexpected error occurred: no such table: detections
+2025-05-07 12:42:17,514 - INFO - 🔔 Alert sent successfully: {'timestamp': '2025-05-07 12:42:17', 'vehicle_id': 'SYSTEM', 'x_position': 0, 'y_position': 0, 'alert': 'send_hourly_data FAILED.'}
+2025-05-07 12:42:33,262 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:42:33,263 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:42:33.263694
+2025-05-07 12:42:33,263 - INFO - 🔄 Deleting images older than 2025-05-07 12:41:33...
+2025-05-07 12:42:33,264 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:42:33,264 - ERROR - ❌ Error deleting images: no such table: detections
+2025-05-07 12:42:33,269 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 12:42:33,269 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 12:42:33,269 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 12:43:41,949 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:43:41,950 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:43:41.950788
+2025-05-07 12:43:41,950 - INFO - 🔄 Deleting images older than 2025-05-07 12:42:41...
+2025-05-07 12:43:41,951 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:43:41,951 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:43:41,951 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:43:41,956 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 12:43:41,956 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 12:43:41,956 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 12:44:41,958 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:44:41.958673
+2025-05-07 12:44:41,959 - INFO - 🔄 Deleting images older than 2025-05-07 12:43:41...
+2025-05-07 12:44:41,959 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:44:41,959 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:44:41,959 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:44:41,963 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:44:42,052 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:44:42,052 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:43:00
+2025-05-07 12:44:42,052 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 12:45:21,366 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:45:21,368 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:45:21.366791
+2025-05-07 12:45:21,369 - INFO - 🔄 Deleting images older than 2025-05-07 12:44:21...
+2025-05-07 12:45:21,369 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:45:21,369 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:45:21,369 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:45:21,385 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 12:45:21,385 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 12:45:21,385 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 12:46:21,378 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:46:21.378585
+2025-05-07 12:46:21,380 - INFO - 🔄 Deleting images older than 2025-05-07 12:45:21...
+2025-05-07 12:46:21,380 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:46:21,380 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:46:21,380 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:46:21,393 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:46:21,467 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:46:21,467 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:45:00
+2025-05-07 12:46:21,468 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 12:47:21,388 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:47:21.388568
+2025-05-07 12:47:21,389 - INFO - 🔄 Deleting images older than 2025-05-07 12:46:21...
+2025-05-07 12:47:21,389 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:47:21,389 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:47:21,389 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:47:21,472 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:47:21,566 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:47:21,566 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:46:00
+2025-05-07 12:47:21,566 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 12:48:21,398 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:48:21.397937
+2025-05-07 12:48:21,398 - INFO - 🔄 Deleting images older than 2025-05-07 12:47:21...
+2025-05-07 12:48:21,398 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:48:21,399 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:48:21,399 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:48:21,576 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:48:21,645 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:48:21,645 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:47:00
+2025-05-07 12:48:21,647 - INFO - 🔄 Found 304 new detections to upload
+2025-05-07 12:48:23,973 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:48:23,974 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:48:23.974302
+2025-05-07 12:48:23,974 - INFO - 🔄 Deleting images older than 2025-05-07 12:47:23...
+2025-05-07 12:48:23,974 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:48:23,974 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:48:23,974 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:48:23,980 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 12:48:23,980 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 12:48:23,980 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 12:49:23,978 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:49:23.978530
+2025-05-07 12:49:23,979 - INFO - 🔄 Deleting images older than 2025-05-07 12:48:23...
+2025-05-07 12:49:23,979 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:49:23,979 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:49:23,979 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:49:23,982 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:49:24,046 - INFO - 🔄 Checking for new data... Last upload time: 2025-03-10 16:18:01
+2025-05-07 12:49:24,047 - INFO - ⏳ Uploading data from 2025-03-10 16:18:01 to 2025-05-07 12:48:00
+2025-05-07 12:49:24,049 - INFO - 🔄 Found 323 new detections to upload
+2025-05-07 12:49:25,818 - INFO - ✅ Data from 2025-03-10 16:18:01 to 2025-05-07 12:48:00 uploaded and deleting
+2025-05-07 12:50:23,988 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:50:23.987965
+2025-05-07 12:50:23,988 - INFO - 🔄 Deleting images older than 2025-05-07 12:49:23...
+2025-05-07 12:50:23,988 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:50:23,988 - INFO - 🔄 Deleting 24 images
+2025-05-07 12:50:24,008 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:50:25,826 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:50:25,880 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:47:26
+2025-05-07 12:50:25,880 - INFO - ⏳ Uploading data from 2025-05-07 12:47:26 to 2025-05-07 12:49:00
+2025-05-07 12:50:25,880 - INFO - 🔄 Found 24 new detections to upload
+2025-05-07 12:50:26,040 - INFO - ✅ Data from 2025-05-07 12:47:26 to 2025-05-07 12:49:00 uploaded and deleting
+2025-05-07 12:51:24,016 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:51:24.016790
+2025-05-07 12:51:24,017 - INFO - 🔄 Deleting images older than 2025-05-07 12:50:24...
+2025-05-07 12:51:24,017 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:51:24,018 - INFO - 🔄 Deleting 4 images
+2025-05-07 12:51:24,023 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:51:26,050 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:51:26,115 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:48:35
+2025-05-07 12:51:26,115 - INFO - ⏳ Uploading data from 2025-05-07 12:48:35 to 2025-05-07 12:50:00
+2025-05-07 12:51:26,116 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 12:52:24,033 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:52:24.033085
+2025-05-07 12:52:24,033 - INFO - 🔄 Deleting images older than 2025-05-07 12:51:24...
+2025-05-07 12:52:24,033 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:52:24,033 - INFO - 🔄 Deleting 27 images
+2025-05-07 12:52:24,055 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:52:26,125 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:52:26,189 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:48:35
+2025-05-07 12:52:26,190 - INFO - ⏳ Uploading data from 2025-05-07 12:48:35 to 2025-05-07 12:51:00
+2025-05-07 12:52:26,192 - INFO - 🔄 Found 289 new detections to upload
+2025-05-07 12:52:27,963 - INFO - ✅ Data from 2025-05-07 12:48:35 to 2025-05-07 12:51:00 uploaded and deleting
+2025-05-07 12:53:24,365 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:53:24,366 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:53:24.366406
+2025-05-07 12:53:24,366 - INFO - 🔄 Deleting images older than 2025-05-07 12:52:24...
+2025-05-07 12:53:24,366 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:53:24,366 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:53:24,366 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:53:24,371 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 12:53:24,371 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 12:53:24,371 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 12:54:24,375 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:54:24.375173
+2025-05-07 12:54:24,376 - INFO - 🔄 Deleting images older than 2025-05-07 12:53:24...
+2025-05-07 12:54:24,376 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:54:24,376 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:54:24,376 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:54:24,377 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:54:24,437 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:50:56
+2025-05-07 12:54:24,438 - INFO - ⏳ Uploading data from 2025-05-07 12:50:56 to 2025-05-07 12:53:00
+2025-05-07 12:54:24,438 - INFO - 🔄 Found 3 new detections to upload
+2025-05-07 12:54:24,510 - INFO - ✅ Data from 2025-05-07 12:50:56 to 2025-05-07 12:53:00 uploaded and deleting
+2025-05-07 12:55:24,383 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:55:24.383721
+2025-05-07 12:55:24,384 - INFO - 🔄 Deleting images older than 2025-05-07 12:54:24...
+2025-05-07 12:55:24,384 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:55:24,384 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:55:24,384 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:55:24,518 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:55:24,625 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:52:26
+2025-05-07 12:55:24,626 - INFO - ⏳ Uploading data from 2025-05-07 12:52:26 to 2025-05-07 12:54:00
+2025-05-07 12:55:24,627 - INFO - 🔄 Found 173 new detections to upload
+2025-05-07 12:55:25,626 - INFO - ✅ Data from 2025-05-07 12:52:26 to 2025-05-07 12:54:00 uploaded and deleting
+2025-05-07 12:56:06,044 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:56:06,045 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:56:06.045260
+2025-05-07 12:56:06,045 - INFO - 🔄 Deleting images older than 2025-05-07 12:55:06...
+2025-05-07 12:56:06,045 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:56:06,045 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:56:06,045 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:56:06,050 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 12:56:06,050 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 12:56:06,050 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 12:57:06,054 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:57:06.054129
+2025-05-07 12:57:06,055 - INFO - 🔄 Deleting images older than 2025-05-07 12:56:06...
+2025-05-07 12:57:06,055 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:57:06,056 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:57:06,056 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:57:06,056 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:57:06,148 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:53:46
+2025-05-07 12:57:06,148 - INFO - ⏳ Uploading data from 2025-05-07 12:53:46 to 2025-05-07 12:56:00
+2025-05-07 12:57:06,148 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 12:58:06,061 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:58:06.061192
+2025-05-07 12:58:06,061 - INFO - 🔄 Deleting images older than 2025-05-07 12:57:06...
+2025-05-07 12:58:06,061 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:58:06,062 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:58:06,062 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:58:06,151 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:58:06,239 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:53:46
+2025-05-07 12:58:06,240 - INFO - ⏳ Uploading data from 2025-05-07 12:53:46 to 2025-05-07 12:57:00
+2025-05-07 12:58:06,241 - INFO - 🔄 Found 283 new detections to upload
+2025-05-07 12:58:07,780 - INFO - ✅ Data from 2025-05-07 12:53:46 to 2025-05-07 12:57:00 uploaded and deleting
+2025-05-07 12:58:56,740 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:58:56,741 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:58:56.741066
+2025-05-07 12:58:56,741 - INFO - 🔄 Deleting images older than 2025-05-07 12:57:56...
+2025-05-07 12:58:56,741 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:58:56,741 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:58:56,742 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:58:56,749 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 12:58:56,749 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 12:58:56,749 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 12:59:56,752 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 12:59:56.752381
+2025-05-07 12:59:56,754 - INFO - 🔄 Deleting images older than 2025-05-07 12:58:56...
+2025-05-07 12:59:56,754 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 12:59:56,754 - INFO - 🔄 Deleting 0 images
+2025-05-07 12:59:56,754 - INFO - ✅ Old images deleted successfully
+2025-05-07 12:59:56,756 - INFO - 🔄 Getting last upload time...
+2025-05-07 12:59:56,877 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:56:53
+2025-05-07 12:59:56,877 - INFO - ⏳ Uploading data from 2025-05-07 12:56:53 to 2025-05-07 12:58:00
+2025-05-07 12:59:56,878 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 13:00:56,763 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:00:56.763128
+2025-05-07 13:00:56,763 - INFO - 🔄 Deleting images older than 2025-05-07 12:59:56...
+2025-05-07 13:00:56,763 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:00:56,764 - INFO - 🔄 Deleting 0 images
+2025-05-07 13:00:56,764 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:00:56,886 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:00:57,046 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:56:53
+2025-05-07 13:00:57,049 - ERROR - ❌ An unexpected error occurred: minute must be in 0..59
+2025-05-07 13:00:57,056 - INFO - 🔔 Alert sent successfully: {'timestamp': '2025-05-07 13:00:57', 'vehicle_id': 'SYSTEM', 'x_position': 0, 'y_position': 0, 'alert': 'send_hourly_data FAILED.'}
+2025-05-07 13:01:06,271 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:01:06,271 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:01:06.271981
+2025-05-07 13:01:06,272 - INFO - 🔄 Deleting images older than 2025-05-07 13:00:06...
+2025-05-07 13:01:06,272 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:01:06,272 - INFO - 🔄 Deleting 0 images
+2025-05-07 13:01:06,272 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:01:06,277 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 13:01:06,278 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 13:01:06,278 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 13:02:06,282 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:02:06.282560
+2025-05-07 13:02:06,284 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:02:06,285 - INFO - 🔄 Deleting images older than 2025-05-07 13:01:06...
+2025-05-07 13:02:06,285 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:02:06,285 - INFO - 🔄 Deleting 0 images
+2025-05-07 13:02:06,285 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:02:06,391 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:56:53
+2025-05-07 13:02:06,392 - INFO - ⏳ Uploading data from 2025-05-07 12:56:53 to 2025-05-07 13:01:00
+2025-05-07 13:02:06,392 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 13:03:06,294 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:03:06.294840
+2025-05-07 13:03:06,295 - INFO - 🔄 Deleting images older than 2025-05-07 13:02:06...
+2025-05-07 13:03:06,295 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:03:06,295 - INFO - 🔄 Deleting 0 images
+2025-05-07 13:03:06,296 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:03:06,400 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:03:06,540 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:56:53
+2025-05-07 13:03:06,540 - INFO - ⏳ Uploading data from 2025-05-07 12:56:53 to 2025-05-07 13:02:00
+2025-05-07 13:03:06,541 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 13:04:06,301 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:04:06.301420
+2025-05-07 13:04:06,302 - INFO - 🔄 Deleting images older than 2025-05-07 13:03:06...
+2025-05-07 13:04:06,302 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:04:06,302 - INFO - 🔄 Deleting 0 images
+2025-05-07 13:04:06,302 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:04:06,546 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:04:06,667 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:56:53
+2025-05-07 13:04:06,668 - INFO - ⏳ Uploading data from 2025-05-07 12:56:53 to 2025-05-07 13:03:00
+2025-05-07 13:04:06,669 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 13:05:06,310 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:05:06.310012
+2025-05-07 13:05:06,310 - INFO - 🔄 Deleting images older than 2025-05-07 13:04:06...
+2025-05-07 13:05:06,310 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:05:06,311 - INFO - 🔄 Deleting 0 images
+2025-05-07 13:05:06,311 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:05:06,677 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:05:06,824 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:56:53
+2025-05-07 13:05:06,825 - INFO - ⏳ Uploading data from 2025-05-07 12:56:53 to 2025-05-07 13:04:00
+2025-05-07 13:05:06,825 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 13:06:06,295 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:06:06.294972
+2025-05-07 13:06:06,295 - INFO - 🔄 Deleting images older than 2025-05-07 13:05:06...
+2025-05-07 13:06:06,295 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:06:06,296 - INFO - 🔄 Deleting 0 images
+2025-05-07 13:06:06,296 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:06:06,809 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:06:06,981 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:56:53
+2025-05-07 13:06:06,981 - INFO - ⏳ Uploading data from 2025-05-07 12:56:53 to 2025-05-07 13:05:00
+2025-05-07 13:06:06,982 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 13:06:30,607 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:06:30,607 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:06:30.607795
+2025-05-07 13:06:30,607 - INFO - 🔄 Deleting images older than 2025-05-07 13:05:30...
+2025-05-07 13:06:30,608 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:06:30,608 - INFO - 🔄 Deleting 0 images
+2025-05-07 13:06:30,608 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:06:30,613 - ERROR - ❌ Could not get the last upload time due to a network error.
+2025-05-07 13:06:30,613 - INFO - 🔄 Checking for new data... Last upload time: None
+2025-05-07 13:06:30,613 - INFO - 😴 No new data to upload. Waiting...
+2025-05-07 13:07:30,614 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:07:30.614077
+2025-05-07 13:07:30,615 - INFO - 🔄 Deleting images older than 2025-05-07 13:06:30...
+2025-05-07 13:07:30,615 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:07:30,617 - INFO - 🔄 Deleting 0 images
+2025-05-07 13:07:30,617 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:07:30,619 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:07:30,811 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:56:53
+2025-05-07 13:07:30,811 - INFO - ⏳ Uploading data from 2025-05-07 12:56:53 to 2025-05-07 13:06:00
+2025-05-07 13:07:30,812 - INFO - 🔄 Found 0 new detections to upload
+2025-05-07 13:08:30,623 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:08:30.623677
+2025-05-07 13:08:30,623 - INFO - 🔄 Deleting images older than 2025-05-07 13:07:30...
+2025-05-07 13:08:30,624 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:08:30,625 - INFO - 🔄 Deleting 500 images
+2025-05-07 13:08:30,808 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:08:30,818 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:08:31,012 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 12:56:53
+2025-05-07 13:08:31,013 - INFO - ⏳ Uploading data from 2025-05-07 12:56:53 to 2025-05-07 13:07:00
+2025-05-07 13:08:31,015 - INFO - 🔄 Found 175 new detections to upload
+2025-05-07 13:08:32,586 - INFO - ✅ Data from 2025-05-07 12:56:53 to 2025-05-07 13:07:00 uploaded and deleting
+2025-05-07 13:09:30,816 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:09:30.816306
+2025-05-07 13:09:30,816 - INFO - 🔄 Deleting images older than 2025-05-07 13:08:30...
+2025-05-07 13:09:30,816 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:09:30,819 - INFO - 🔄 Deleting 549 images
+2025-05-07 13:09:30,991 - INFO - ✅ Old images deleted successfully
+2025-05-07 13:09:32,600 - INFO - 🔄 Getting last upload time...
+2025-05-07 13:09:32,713 - INFO - 🔄 Checking for new data... Last upload time: 2025-05-07 13:06:59
+2025-05-07 13:09:32,713 - INFO - ⏳ Uploading data from 2025-05-07 13:06:59 to 2025-05-07 13:08:00
+2025-05-07 13:09:32,719 - INFO - 🔄 Found 555 new detections to upload
+2025-05-07 13:09:37,722 - ERROR - ❌ No connection to API. Retrying in 5 min...
+2025-05-07 13:10:30,999 - INFO - ⏳ Cleaning up old images..., current time: 2025-05-07 13:10:30.999345
+2025-05-07 13:10:30,999 - INFO - 🔄 Deleting images older than 2025-05-07 13:09:30...
+2025-05-07 13:10:30,999 - INFO - ✅ Keep contrary images are disabled
+2025-05-07 13:10:31,001 - INFO - 🔄 Deleting 322 images
+2025-05-07 13:10:31,109 - INFO - ✅ Old images deleted successfully

@@ -1,0 +1,4 @@
+camera_service: 1
+delete_old_images: 1
+fastapi_server: 1
+send_hourly_data: 1
