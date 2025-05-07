@@ -114,7 +114,7 @@ def create_master_db():
 
 
 # Run the db creation
-create_master_db()
+#create_master_db()
 
 # Pydantic model for the incoming data
 class DetectionData(BaseModel):
