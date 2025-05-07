@@ -29,7 +29,8 @@ COORDINATE_SIZE = config["model"]["coordinate_size"]
 IOU_THRESHOLD = config["model"]["iou_threshold"]
 MAX_RETRIES = config["application"]["max_retries"]
 API_ALERT_URL = config["application"]["api_alert_url"]
-OAK_PREVIEW_SIZE = config["oak_camera"]["preview_size"]
+OAK_PREVIEW_SIZE_X = config["oak_camera"]["preview_size_x"]
+OAK_PREVIEW_SIZE_Y = config["oak_camera"]["preview_size_y"]
 OAK_FPS = config["oak_camera"]["fps"]
 NUMBER_OF_DETECTION_CLASSES = config["oak_camera"]["number_of_detection_classes"]
 
@@ -74,7 +75,7 @@ def update_status(thread_name, status, lock):  # Receive the lock as a parameter
 # Initialize the database (if it doesn't exist)
 conn = sqlite3.connect(DB_PATH)
 cursor = conn.cursor()
-if  os.path.exists(DB_PATH):
+if not os.path.exists(DB_PATH):
     cursor.execute(
         """
         CREATE TABLE IF NOT EXISTS detections (
@@ -132,17 +133,14 @@ def save_detection(vehicle_id, x_pos, y_pos, direction, image_data=None):
     finally:
         conn.close()
 
-def save_image(image_data=None):
+def save_image(image_data):
     """Saves an image to the database."""
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
-   
-    try: 
-        cursor.execute("DELETE FROM preview_images")   
+    try:    
         cursor.execute(
-            f"INSERT into preview_images (image) VALUES (?)", (image_data,)
+            "UPDATE preview_images SET image = ? WHERE id = 1", (image_data)
         )
-        
         conn.commit()
        
     except sqlite3.Error as e:  
@@ -232,7 +230,7 @@ def initialize_camera():
     try:
         pipeline = dai.Pipeline()
         cam_rgb = pipeline.create(dai.node.ColorCamera)
-        cam_rgb.setPreviewSize(OAK_PREVIEW_SIZE, OAK_PREVIEW_SIZE)
+        cam_rgb.setPreviewSize(OAK_PREVIEW_SIZE_X, OAK_PREVIEW_SIZE_Y)
         cam_rgb.setInterleaved(False)
         cam_rgb.setFps(OAK_FPS)
 
@@ -396,7 +394,7 @@ def run_camera(pipeline):
                 traceback.print_exc()
 
 
-def main(lock=None):  # Receive the lock as a parameter
+def main(lock):  # Receive the lock as a parameter
     """
     Main function to handle camera operation with error recovery.
     """
@@ -444,5 +442,4 @@ def main(lock=None):  # Receive the lock as a parameter
 
 
 if __name__ == "__main__":
-    lock= threading.Lock()  # Create a lock for the main function
     main()
