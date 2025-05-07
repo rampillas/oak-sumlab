@@ -298,6 +298,7 @@ def run_camera(pipeline):
                     frame = in_video.getCvFrame()
                     refresh_rate = get_refresh_rate()
 
+
                 for detection in tracklets:
                     if detection.label in (0, 2, 5, 7):
                         roi = detection.roi.denormalize(
@@ -389,6 +390,14 @@ def run_camera(pipeline):
                             save_detection(
                                 vehicle_id, x_center, y_center, last_position, image_data
                             )
+                    else:
+                        if send_image:
+                            if frame_count % int(OAK_FPS * refresh_rate) == 0:
+                                image_data = cv2.imencode(".jpg", frame)[1].tobytes()
+                                save_image(image_data)
+                                frame_count=0
+                            else:
+                                frame_count+=1
 
                 time.sleep(0.03)
             except Exception as e:
