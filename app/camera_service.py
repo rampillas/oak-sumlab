@@ -304,7 +304,7 @@ def run_camera(pipeline):
                 for detection in tracklets:
                     if detection.label in (0, 2, 5, 7):
                         roi = detection.roi.denormalize(
-                            OAK_PREVIEW_SIZE, OAK_PREVIEW_SIZE
+                            OAK_PREVIEW_SIZE_x, OAK_PREVIEW_SIZE_y
                         )  # the size of the image
                         x1 = int(roi.topLeft().x)
                         y1 = int(roi.topLeft().y)
