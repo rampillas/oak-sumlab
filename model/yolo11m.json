@@ -6,7 +6,7 @@
     "nn_config": {
         "output_format": "detection",
         "NN_family": "YOLO",
-        "input_size": "1920x1088",
+        "input_size": "1280x704",
         "NN_specific_metadata": {
             "classes": 80,
             "coordinates": 4,

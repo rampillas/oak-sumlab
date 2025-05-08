@@ -66,8 +66,8 @@ application:
 
 # --- Oak Camera Settings ---
 oak_camera:
-  preview_size_x: 1920 #640 # yolo8
-  preview_size_y: 1080 #640 # yolo8
+  preview_size_x: 1280 #640 # yolo8
+  preview_size_y: 704 #640 # yolo8
   fps: 20
   number_of_detection_classes: [0, 2, 5, 7]
 
