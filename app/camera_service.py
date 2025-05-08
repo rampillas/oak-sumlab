@@ -283,6 +283,7 @@ def run_camera(pipeline):
     """
     with dai.Device(pipeline) as device:
         device.setIrFloodLightIntensity(0.5)
+        device.setIrLaserDotProjectorIntensity(0.5) 
         q_nn = device.getOutputQueue(name="detections", maxSize=4, blocking=False)
         q_video = device.getOutputQueue(name="video", maxSize=4, blocking=False)
 
