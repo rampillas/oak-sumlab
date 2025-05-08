@@ -193,11 +193,11 @@ if st.sidebar.button("📊 Monitoring"):
 st.sidebar.divider()
 
 st.sidebar.text("Control de procesos")
-print("Control de procesos")
-if st.sidebar.button("🔁 Reiniciar proceso1"):
-    cerrar_screen(SESSION_NAME)
-    lanzar_screen(SESSION_NAME, COMANDO_RELANZAR)
-    st.sidebar.success(f"Sesión '{SESSION_NAME}' reiniciada con éxito.")
+#print("Control de procesos")
+#if st.sidebar.button("🔁 Reiniciar proceso1"):
+#    cerrar_screen(SESSION_NAME)
+#    lanzar_screen(SESSION_NAME, COMANDO_RELANZAR)
+#    st.sidebar.success(f"Sesión '{SESSION_NAME}' reiniciada con éxito.")
 
 st.sidebar.markdown('###')
 

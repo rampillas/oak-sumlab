@@ -116,10 +116,10 @@ conn.close()
 
 def save_detection(vehicle_id, x_pos, y_pos, direction, image_data=None):
     """Saves a vehicle detection to the database."""
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     try:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         cursor.execute(
             "INSERT INTO detections (timestamp, vehicle_id, x_position, y_position, direction, image) VALUES (?, ?, ?, ?, ?, ?)",
             (timestamp, vehicle_id, x_pos, y_pos, direction, image_data),
