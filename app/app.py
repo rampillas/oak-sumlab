@@ -11,6 +11,7 @@ from datetime import datetime, timedelta
 import threading
 import yaml
 from config_loader import load_config
+import subprocess
 
 # Load Config
 config = load_config()
@@ -25,7 +26,18 @@ EU_FOOTER = config["data"]["eu_footer"]
 MONITORED_LOGS = config["logging"]["monitored_logs"]
 PREVIEW_REFRESH_RATE = 0.5  # Refresh rate for camera preview in seconds
 
+# codigo para reiniciar el servicio
+SESSION_NAME = "hilos"
+COMANDO_RELANZAR = "cd /home/pi/oak-sumlab/app && python3 start_theads.py"
+
+
 # --- Helper Functions ---
+def cerrar_screen(nombre):
+    subprocess.run(["screen", "-S", nombre, "-X", "quit"])
+
+def lanzar_screen(nombre, comando):
+    subprocess.run(["screen", "-dmS", nombre, "bash", "-c", f"{comando}; exec bash"])
+
 def get_detection_history(show_image):
     """Retrieves detection history from the database."""
     conn = sqlite3.connect(DB_PATH)
@@ -48,11 +60,15 @@ def update_config(send_image, preview_refresh_rate):
     
 def get_last_preview_image():
     """Retrieves the last preview image from the preview_images table."""
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    cursor.execute("SELECT image FROM preview_images LIMIT 1")
-    result = cursor.fetchone()
-    conn.close()
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        cursor.execute("SELECT image FROM preview_images LIMIT 1")
+        result = cursor.fetchone()
+        conn.close()
+    except Exception as e:
+        st.error(f"Error retrieving last preview image: {e}")
+        return None
     return result[0] if result and result[0] else None
 
 
@@ -175,6 +191,13 @@ if st.sidebar.button("📊 Monitoring"):
     st.session_state.page = "Monitoring"
 
 st.sidebar.divider()
+
+st.sidebar.text("Control de procesos")
+
+if st.sidebar.button("🔁 Reiniciar proceso1"):
+    cerrar_screen(SESSION_NAME)
+    lanzar_screen(SESSION_NAME, COMANDO_RELANZAR)
+    st.sidebar.success(f"Sesión '{SESSION_NAME}' reiniciada con éxito.")
 st.sidebar.markdown('###')
 
 st.sidebar.markdown(

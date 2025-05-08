@@ -7,6 +7,7 @@ import os
 import uvicorn
 import logging
 import threading
+import sqlite3
 import yaml
 from config_loader import load_config
 
@@ -22,6 +23,7 @@ MASTER_DB_HOST = config["master_db"]["host"]
 MASTER_DB_NAME = config["master_db"]["name"]
 MASTER_DB_USER = config["master_db"]["user"]
 MASTER_DB_PASSWORD = config["master_db"]["password"]
+DB_PATH = config["data"]["db_path"]
 
 # Ensure the log directory exists
 if not os.path.exists(LOG_DIR):
@@ -41,6 +43,9 @@ fastapi_logger.addHandler(file_handler)
 
 # Create a lock for logging
 log_lock = threading.Lock()
+conn_lock = threading.Lock()
+# SQLite database path
+
 
 
 def update_status(thread_name, status, lock):
@@ -125,6 +130,16 @@ class DetectionData(BaseModel):
     y_position: float
     direction: str
 
+@app.get("/ultima imagen")
+def get_last_image():   
+    """Returns the last image from the master database."""
+    with conn_lock:
+        conn= sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        cursor.execute("SELECT image FROM preview_images LIMIT 1")
+        result = cursor.fetchone()
+        conn.close()
+    return result[0] if result and result[0] else None
 
 # Endpoint to get the last upload time
 @app.get("/last-upload-time")
