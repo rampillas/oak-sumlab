@@ -233,9 +233,6 @@ def initialize_camera():
     try:
         
         pipeline = dai.Pipeline()
-        with dai.Device(pipeline) as device:
-            #device.setIrLaserDotProjectorIntensity(0.5) # in %, from 0 to 1 para par estereo
-            device.setIrFloodLightIntensity(0.5) # in %, from 0 to 1 npara la noche
         cam_rgb = pipeline.create(dai.node.ColorCamera)
         cam_rgb.setPreviewSize(OAK_PREVIEW_SIZE_x, OAK_PREVIEW_SIZE_y)
         cam_rgb.setInterleaved(False)
@@ -285,6 +282,7 @@ def run_camera(pipeline):
     Runs the camera detection process.
     """
     with dai.Device(pipeline) as device:
+        device.setIrFloodLightIntensity(0.5)
         q_nn = device.getOutputQueue(name="detections", maxSize=4, blocking=False)
         q_video = device.getOutputQueue(name="video", maxSize=4, blocking=False)
 
