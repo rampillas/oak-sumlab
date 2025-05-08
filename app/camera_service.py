@@ -231,6 +231,9 @@ def initialize_camera():
     Initializes the OAK-1 camera and returns the pipeline.
     """
     try:
+        with dai.Device(pipeline) as device:
+            #device.setIrLaserDotProjectorIntensity(0.5) # in %, from 0 to 1 para par estereo
+            device.setIrFloodLightIntensity(0.5) # in %, from 0 to 1 npara la noche
         pipeline = dai.Pipeline()
         cam_rgb = pipeline.create(dai.node.ColorCamera)
         cam_rgb.setPreviewSize(OAK_PREVIEW_SIZE_x, OAK_PREVIEW_SIZE_y)
