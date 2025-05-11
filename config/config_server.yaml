@@ -1,0 +1,30 @@
+# config.yaml
+
+# --- API Settings ---
+api:
+  host: 10.10.10.10
+
+# --- Server Settings ---
+servers:
+  streamlit:
+    port: 8501
+    address: 0.0.0.0
+  fastapi:
+    port: 8000
+    address: 0.0.0.0
+
+# --- Master Database ---
+master_db:
+  host: 10.147.17.42
+  name: circuit
+  user: postgres
+  password: Madremia902
+
+# --- Data Storage ---
+data:
+  sumlab_logo: ../data/sumlab_logo.png #Add path for sumlab logo
+  eu_footer: ../data/eu_footer.png #Add path for eu_footer
+
+# --- Logging ---
+logging:
+  default_log_level: INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL

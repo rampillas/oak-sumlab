@@ -1,7 +1,7 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 from datetime import datetime, timedelta
-from typing import List
+from typing import List, Optional
 import psycopg2
 import os
 import uvicorn
@@ -9,6 +9,7 @@ import logging
 import threading
 import sqlite3
 import yaml
+import base64
 from config_loader import load_config
 
 # Load Config
@@ -238,6 +239,147 @@ def receive_alert(data: AlertData):
         raise HTTPException(status_code=500, detail=f"Error receiving alert: {e}")
     finally:
         if conn:
+            conn.close()
+
+
+@app.get("/detections")
+def get_detections(show_image: Optional[bool] = Query(False, description="Include image in the response")):
+    """
+    Returns the last 50 detections in JSON format.
+    If show_image is True, includes the image from preview_images table.
+    """
+    conn_sqlite = None
+    try:
+        with conn_lock:
+            conn_sqlite = sqlite3.connect(DB_PATH)
+            cursor_sqlite = conn_sqlite.cursor()
+            cursor_sqlite.execute("SELECT id, timestamp, vehicle_id, x_position, y_position, direction FROM detections ORDER BY id DESC LIMIT 50")
+            rows = cursor_sqlite.fetchall()
+            conn_sqlite.close()
+        detections = []
+        for row in rows:
+            detection = {
+                "id": row[0],
+                "timestamp": row[1],
+                "vehicle_id": row[2],
+                "x_position": row[3],
+                "y_position": row[4],
+                "direction": row[5]
+            }
+            detections.append(detection)
+            
+        return {"detections": detections}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error fetching detections: {e}")
+    finally:
+        pass
+
+
+@app.get("/preview_image")
+def get_preview_image():
+    """Returns the last image encoded in base64 with key 'image_data'."""
+    with conn_lock:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        cursor.execute("SELECT image FROM preview_images LIMIT 1")
+        result = cursor.fetchone()
+        conn.close()
+    if result and result[0]:
+        image_bytes = result[0]
+        if isinstance(image_bytes, memoryview):
+            image_bytes = image_bytes.tobytes()
+        image_base64 = base64.b64encode(image_bytes).decode('utf-8')
+        return {"image_data": image_base64}
+    else:
+        raise HTTPException(status_code=404, detail="No preview image found")
+
+
+@app.get("/vehicle_count_last_hour")
+def vehicle_count_last_hour():
+    """Returns the count of unique vehicles detected in the last hour."""
+    conn = None
+    try:
+        one_hour_ago = datetime.now() - timedelta(hours=1)
+        conn = psycopg2.connect(
+            host=MASTER_DB_HOST,
+            database=MASTER_DB_NAME,
+            user=MASTER_DB_USER,
+            password=MASTER_DB_PASSWORD,
+        )
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT COUNT(DISTINCT vehicle_id) FROM master_detections WHERE timestamp >= %s",
+            (one_hour_ago.isoformat(),)
+        )
+        result = cursor.fetchone()
+        count = result[0] if result and result[0] is not None else 0
+        return {"count": count}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error fetching vehicle count: {e}")
+    finally:
+        if conn:
+            conn.close()
+
+
+@app.get("/logs")
+def get_logs(name: str = Query(..., description="Name of the log file to fetch")):
+    """Returns the last 100 lines of the specified log file."""
+    log_path = os.path.join(LOG_DIR, name)
+    if not os.path.exists(log_path):
+        raise HTTPException(status_code=404, detail=f"Log file '{name}' not found")
+    try:
+        with open(log_path, "r") as f:
+            lines = f.readlines()
+        last_100_lines = lines[-100:]
+        return {"log": "".join(last_100_lines)}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error reading log file: {e}")
+
+
+@app.get("/status")
+def get_status():
+    """Returns the current content of the status.yaml file as JSON."""
+    try:
+        with open(STATUS_FILE, "r") as f:
+            data = yaml.safe_load(f) or {}
+        return data
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Status file not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error reading status file: {e}")
+
+
+class ConfigUpdate(BaseModel):
+    send_image: bool
+    refresh_rate: int
+
+@app.post("/config")
+def update_config(config_data: ConfigUpdate):
+    """Updates the config table in SQLite with send_image and refresh_rate."""
+    with conn_lock:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        try:
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS config (
+                    id INTEGER PRIMARY KEY,
+                    send_image BOOLEAN,
+                    refresh_rate INTEGER
+                )
+            """)
+            cursor.execute("SELECT id FROM config WHERE id=1")
+            if cursor.fetchone():
+                cursor.execute("UPDATE config SET send_image=?, refresh_rate=? WHERE id=1",
+                               (config_data.send_image, config_data.refresh_rate))
+            else:
+                cursor.execute("INSERT INTO config (id, send_image, refresh_rate) VALUES (1, ?, ?)",
+                               (config_data.send_image, config_data.refresh_rate))
+            conn.commit()
+            return {"message": "Config updated successfully"}
+        except Exception as e:
+            conn.rollback()
+            raise HTTPException(status_code=500, detail=f"Error updating config: {e}")
+        finally:
             conn.close()
 
 
