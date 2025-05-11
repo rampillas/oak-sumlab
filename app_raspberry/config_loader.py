@@ -5,7 +5,7 @@ import os
 #config_path = os.getenv("CONFIG_PATH", "config.yaml")
 
 
-def load_config(config_path="../config/config.yaml"):
+def load_config(config_path="../config/config_raspi.yaml"):
     config_path = config_path
     """Loads configuration from a YAML file."""
     # Ensure config path is absolute for container environments
