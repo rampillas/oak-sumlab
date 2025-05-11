@@ -324,14 +324,16 @@ def vehicle_count_last_hour():
 @app.get("/logs")
 def get_logs(name: str = Query(..., description="Name of the log file to fetch")):
     """Returns the last 100 lines of the specified log file."""
+    print(name)
     log_path = os.path.join(LOG_DIR, name+'.log')
     if not os.path.exists(log_path):
         raise HTTPException(status_code=404, detail=f"Log file '{name}' not found")
     try:
         with open(log_path, "r") as f:
             lines = f.readlines()
-        last_100_lines = lines[-20:]
-        return {"log": "".join(last_100_lines)}
+            last_lines = lines[-100:]  # Get last 100 lines
+            last_lines.reverse()  # Reverse the order
+        return {"log": "".join(last_lines)}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error reading log file: {e}")
 
