@@ -29,7 +29,7 @@ data:
 logging:
   default_log_level: INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL
   monitored_logs:
-    #- camera_service.log
+    - camera_service.log
     - guardar_horario
     - fastapi_server
     - start_threads
