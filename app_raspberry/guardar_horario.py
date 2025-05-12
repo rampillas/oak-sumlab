@@ -1,6 +1,8 @@
 import threading
 import sqlite3
 import requests
+import psycopg2
+
 import time
 from datetime import datetime, timedelta
 import logging

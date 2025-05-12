@@ -8,6 +8,8 @@ from guardar_horario import send_hourly_data, delete_old_images
 from fastapi_server import run_server
 from datetime import datetime
 from config_loader import load_config  # Import the function
+import psycopg2
+
 
 # Load Config
 config = load_config()
