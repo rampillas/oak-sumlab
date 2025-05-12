@@ -4,7 +4,7 @@ from psycopg2 import sql
 # Configuración inicial
 PG_HOST = "localhost"
 PG_ADMIN_USER = "postgres"
-PG_ADMIN_PASSWORD = "admin_password"  # Cambiar por la contraseña real del superusuario
+PG_ADMIN_PASSWORD = "Madremia902"  # Cambiar por la contraseña real del superusuario
 
 DB_NAME = "logs"
 DB_USER = "logs_users"
