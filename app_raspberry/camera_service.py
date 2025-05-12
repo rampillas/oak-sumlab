@@ -10,15 +10,14 @@ from collections import deque
 import os
 import base64
 import traceback
-import logging
 import threading
 import yaml
+import psycopg2
 from config_loader import load_config  # Import the function
 
 # Load Config
 config = load_config()
 
-# Configure logging for camera_service
 LOG_DIR = config["logging"]["log_dir"]
 DB_PATH = config["data"]["db_path"]
 STATUS_FILE = config["data"]["status_file"]
@@ -34,23 +33,27 @@ OAK_PREVIEW_SIZE_y = config["oak_camera"]["preview_size_y"]
 OAK_FPS = config["oak_camera"]["fps"]
 NUMBER_OF_DETECTION_CLASSES = config["oak_camera"]["number_of_detection_classes"]
 
-# Ensure the log directory exists
-if not os.path.exists(LOG_DIR):
-    os.makedirs(LOG_DIR)
-log_file = os.path.join(LOG_DIR, "camera_service.log")
+PG_HOST = config["pg_db"]["host"]
+PG_NAME= config["pg_db"]["name"]
+PG_USERNAME = config["pg_db"]["user"]
+PG_PASSWORD = config["pg_db"]["password"]
 
-# Create a specific logger for camera_service
-camera_logger = logging.getLogger("camera_service")
-camera_logger.setLevel(logging.INFO)
 
-# Create a file handler for the camera_service log file
-file_handler = logging.FileHandler(log_file)
-file_handler.setFormatter(
-    logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-)
+def log_to_db(level, message):
+    try:
+        conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
+        cursor = conn.cursor()
+        cursor.execute(
+            "INSERT INTO camera_service_logs (timestamp, level, message) VALUES (NOW(), %s, %s)",
+            (level, message)
+        )
+        conn.commit()
+    except Exception as e:
+        print(f"Error logging to database: {e}")
+    finally:
+        if 'conn' in locals():
+            conn.close()
 
-# Add the file handler to the camera_service logger
-camera_logger.addHandler(file_handler)
 
 # Initialize VehicleTracker
 vt = vehicles_tracker.VehicleTracker()
@@ -126,10 +129,10 @@ def save_detection(vehicle_id, x_pos, y_pos, direction, image_data=None):
         )
         conn.commit()
         with log_lock:
-            camera_logger.debug(f"✅ Detection saved: {vehicle_id} at ({x_pos}, {y_pos}) in direction {direction}")
+            log_to_db("DEBUG", f"✅ Detection saved: {vehicle_id} at ({x_pos}, {y_pos}) in direction {direction}")
     except sqlite3.Error as e:
         with log_lock:
-            camera_logger.error(f"❌ Error saving detection: {e}")
+            log_to_db("ERROR", f"❌ Error saving detection: {e}")
     finally:
         conn.close()
 
@@ -148,7 +151,7 @@ def save_image(image_data=None):
        
     except sqlite3.Error as e:  
         with log_lock:
-            camera_logger.error(f"❌ Error saving image: {e}")
+            log_to_db("ERROR", f"❌ Error saving image: {e}")
     finally:
         conn.close()
     
@@ -183,17 +186,13 @@ def send_alert(vehicle_id, x_pos, y_pos, alert_type="Sentido contrario"):
         response = requests.post(API_ALERT_URL, json=data, timeout=5)
         if response.status_code == 200:
             with log_lock:
-                camera_logger.info("✅ Alerta enviada correctamente")
+                log_to_db("INFO", "✅ Alerta enviada correctamente")
         else:
             with log_lock:
-                camera_logger.warning(
-                    f"⚠️ Fallo en el envío de alerta, status: {response.status_code}"
-                )
+                log_to_db("WARNING", f"⚠️ Fallo en el envío de alerta, status: {response.status_code}")
     except requests.exceptions.RequestException:
         with log_lock:
-            camera_logger.error(
-                "❌ No se pudo enviar la alerta, se reintentará en la siguiente detección."
-            )
+            log_to_db("ERROR", "❌ No se pudo enviar la alerta, se reintentará en la siguiente detección.")
 
 
 def get_config():
@@ -206,7 +205,7 @@ def get_config():
         return result[0] if result else False
     except sqlite3.Error as e:
         with log_lock:
-            camera_logger.error(f"❌ Error getting config: {e}")
+            log_to_db("ERROR", f"❌ Error getting config: {e}")
         return False  # Default to False in case of error
     finally:
         conn.close()
@@ -221,7 +220,7 @@ def get_refresh_rate():
         return result[0] if result else 0.5
     except sqlite3.Error as e:
         with log_lock:
-            camera_logger.error(f"❌ Error getting refresh rate: {e}")
+            log_to_db("ERROR", f"❌ Error getting refresh rate: {e}")
         return 0.5  # Default to 0.5 in case of error
     finally:
         conn.close()    
@@ -267,13 +266,12 @@ def initialize_camera():
         xout_rgb = pipeline.create(dai.node.XLinkOut)
         xout_rgb.setStreamName("video")
         cam_rgb.preview.link(xout_rgb.input)
-
         with log_lock:
-            camera_logger.info("✅ Camera initialized successfully.")
+            log_to_db("INFO", "✅ Camera initialized successfully.")
         return pipeline
     except Exception as e:
         with log_lock:
-            camera_logger.error(f"❌ Error initializing camera: {e}")
+            log_to_db("ERROR", f"❌ Error initializing camera: {e}")
         return None
 
 
@@ -413,7 +411,7 @@ def run_camera(pipeline):
                 time.sleep(0.03)
             except Exception as e:
                 with log_lock:
-                    camera_logger.error(f"❌ Error in camera operation: {e}")
+                    log_to_db("ERROR", f"❌ Error in camera operation: {e}")
                 traceback.print_exc()
 
 
@@ -436,26 +434,22 @@ def main(lock=None):  # Receive the lock as a parameter
                 run_camera(pipeline)
             else:
                 with log_lock:
-                    camera_logger.error(
-                        "❌ Pipeline is none, the camera will not run."
-                    )
+                    log_to_db("ERROR", "❌ Pipeline is none, the camera will not run.")
                 break  # if pipeline is none, exit
         except Exception as e:
             with log_lock:
-                camera_logger.error(f"❌ Error in camera operation: {e}")
+                log_to_db("ERROR", f"❌ Error in camera operation: {e}")
             traceback.print_exc()
             retries += 1
             with log_lock:
-                camera_logger.info(f"🔄 Retrying... (attempt {retries}/{max_retries})")
+                log_to_db("INFO", f"🔄 Retrying... (attempt {retries}/{max_retries})")
             pipeline = None  # set pipeline to none to force reinitialization
             time.sleep(5)  # Wait for 5 seconds before retrying
 
     # If it reaches here, it means max retries have been reached
     update_status("camera_service", 0, lock)  # Pass the lock to update_status
     with log_lock:
-        camera_logger.error(
-            f"❌❌❌ Max retries reached ({max_retries}). Sending emergency alert."
-        )
+        log_to_db("ERROR", f"❌❌❌ Max retries reached ({max_retries}). Sending emergency alert.")
     send_alert(
         vehicle_id="SYSTEM",
         x_pos=0,

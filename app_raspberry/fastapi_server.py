@@ -12,6 +12,8 @@ import yaml
 import base64
 from config_loader import load_config
 
+
+
 # Load Config
 config = load_config()
 
@@ -19,28 +21,32 @@ app = FastAPI()
 
 # Database configuration for the master database (PostgreSQL)
 STATUS_FILE = config["data"]["status_file"]
-LOG_DIR = config["logging"]["log_dir"]
 MASTER_DB_HOST = config["master_db"]["host"]
 MASTER_DB_NAME = config["master_db"]["name"]
 MASTER_DB_USER = config["master_db"]["user"]
 MASTER_DB_PASSWORD = config["master_db"]["password"]
 DB_PATH = config["data"]["db_path"]
 
-# Ensure the log directory exists
-if not os.path.exists(LOG_DIR):
-    os.makedirs(LOG_DIR)
-log_file = os.path.join(LOG_DIR, "fastapi_server.log")
+PG_HOST = config["pg_db"]["host"]
+PG_NAME= config["pg_db"]["name"]
+PG_USERNAME = config["pg_db"]["user"]
+PG_PASSWORD = config["pg_db"]["password"]
 
-# Create a specific logger for fastapi_server
-fastapi_logger = logging.getLogger("fastapi_server")
-fastapi_logger.setLevel(logging.INFO)
 
-# Create a file handler for the fastapi_server log file
-file_handler = logging.FileHandler(log_file)
-file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
-
-# Add the file handler to the fastapi_server logger
-fastapi_logger.addHandler(file_handler)
+def log_to_db(level, message):
+    try:
+        conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
+        cursor = conn.cursor()
+        cursor.execute(
+            "INSERT INTO fastapi_service_logs (timestamp, level, message) VALUES (NOW(), %s, %s)",
+            (level, message)
+        )
+        conn.commit()
+    except Exception as e:
+        print(f"Error logging to database: {e}")
+    finally:
+        if 'conn' in locals():
+            conn.close()
 
 # Create a lock for logging
 log_lock = threading.Lock()
@@ -110,10 +116,10 @@ def create_master_db():
             cursor.execute("INSERT INTO last_upload (last_upload_time) VALUES (%s)", [str(datetime.now() - timedelta(days=1))])
         conn.commit()
         with log_lock:
-            fastapi_logger.info('✅ Database created correctly')
+            log_to_db("INFO", '✅ Database created correctly')
     except Exception as e:
         with log_lock:
-            fastapi_logger.error(f"❌ Error creating database: {e}")
+            log_to_db("ERROR", f"❌ Error creating database: {e}")
     finally:
         if conn:
             conn.close()
@@ -201,7 +207,7 @@ def receive_data_batch(data: List[DetectionData]):
             )
         conn.commit()
         with log_lock:
-            fastapi_logger.info(f"✅ Data batch received and stored: {len(data)} items")
+            log_to_db("INFO", f"✅ Data batch received and stored: {len(data)} items")
 
         # Update the last upload time with the latest timestamp from the data
         cursor.execute("INSERT INTO last_upload (last_upload_time) VALUES (%s)", (latest_timestamp,))
@@ -233,7 +239,7 @@ def receive_alert(data: AlertData):
     conn = None
     try:
         with log_lock:
-            fastapi_logger.info(f"🔔 Alert received: {data}")
+            log_to_db("INFO", f"🔔 Alert received: {data}")
         return {"message": "Alert received successfully", "alert": data.alert}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error receiving alert: {e}")
@@ -321,21 +327,51 @@ def vehicle_count_last_hour():
             conn.close()
 
 
+
+# Nueva implementación: consulta la tabla fastapi_service_logs en PostgreSQL local
 @app.get("/logs")
-def get_logs(name: str = Query(..., description="Name of the log file to fetch")):
-    """Returns the last 100 lines of the specified log file."""
-    print(name)
-    log_path = os.path.join(LOG_DIR, name+'.log')
-    if not os.path.exists(log_path):
-        raise HTTPException(status_code=404, detail=f"Log file '{name}' not found")
+def get_logs(table: str = Query(..., description="Name of the log table to fetch")):
+    """
+    Returns the 30 most recent logs from the fastapi_service_logs table in the local PostgreSQL database.
+    Each log is represented as a dictionary with keys: timestamp, level, message.
+    """
+    
+    conn = None
+    allowed_tables = {
+        "fastapi_service_logs",
+        "camera_service_logs",
+        "guardar_horario_logs",
+        "start_threads_logs"
+    }
+    if table+'_logs' not in allowed_tables:
+        raise HTTPException(status_code=400, detail=f"Table '{table}' is not allowed. Allowed tables: {', '.join(allowed_tables)}")
+
     try:
-        with open(log_path, "r") as f:
-            lines = f.readlines()
-            last_lines = lines[-100:]  # Get last 100 lines
-            last_lines.reverse()  # Reverse the order
-        return {"log": "".join(last_lines)}
+        conn = psycopg2.connect(
+            host=PG_HOST,
+            database=PG_NAME,
+            user=PG_USERNAME,
+            password=PG_PASSWORD,
+        )
+        cursor = conn.cursor()
+        cursor.execute(
+            f"SELECT timestamp, level, message FROM {table}_logs ORDER BY timestamp DESC LIMIT 30"
+        )
+        rows = cursor.fetchall()
+        logs = []
+        for row in rows:
+            log_entry = {
+                "timestamp": str(row[0]),
+                "level": row[1],
+                "message": row[2],
+            }
+            logs.append(log_entry)
+        return logs
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error reading log file: {e}")
+        raise HTTPException(status_code=500, detail=f"Error fetching logs: {e}")
+    finally:
+        if conn:
+            conn.close()
 
 
 @app.get("/status")
