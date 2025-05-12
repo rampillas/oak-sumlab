@@ -2,9 +2,6 @@
 
 # --- Server Settings ---
 servers:
-  streamlit:
-    port: 8501
-    address: 0.0.0.0
   fastapi:
     port: 8000
     address: 0.0.0.0

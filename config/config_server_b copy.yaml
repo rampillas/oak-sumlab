@@ -2,7 +2,7 @@
 
 # --- API Settings ---
 api:
-  host: 10.10.10.10
+  host: 172.29.186.212
 
 # --- Server Settings ---
 servers:
@@ -28,3 +28,8 @@ data:
 # --- Logging ---
 logging:
   default_log_level: INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  monitored_logs:
+    #- camera_service.log
+    - guardar_horario
+    - fastapi_server
+    - start_threads

@@ -466,4 +466,4 @@ def main(lock=None):  # Receive the lock as a parameter
 
 if __name__ == "__main__":
     lock= threading.Lock()  # Create a lock for the main function
-    main()
+    main(lock)
