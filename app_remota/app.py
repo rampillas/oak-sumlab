@@ -24,7 +24,7 @@ def get_detection_history(show_image):
     """Retrieves detection history from the API."""
     try:
         params = {"show_image": str(show_image).lower()}
-        response = requests.get(f"{API_URL}:8000/detections", params=params, timeout=5)
+        response = requests.get(f"http://localhost:8000/detections", params=params, timeout=5)
         response.raise_for_status()
         data = response.json()
         return data.get("detections", [])
@@ -61,7 +61,7 @@ def get_last_preview_image():
 def get_last_upload_time():
     """Retrieves the last upload time from the API."""
     try:
-        response = requests.get(f"{API_URL}:8000/last_upload_time", timeout=5)
+        response = requests.get(f"http://localhost:8000/last-upload-time", timeout=5)
         response.raise_for_status()
         data = response.json()
         return data.get("last_upload_time", "N/A")
@@ -72,7 +72,7 @@ def get_last_upload_time():
 def get_vehicle_count_last_hour():
     """Gets the number of vehicles detected in the last hour from the API."""
     try:
-        response = requests.get(f"{API_URL}:8000/vehicle_count_last_hour", timeout=5)
+        response = requests.get(f"http://localhost:8000/vehicle_count_last_hour", timeout=5)
         response.raise_for_status()
         data = response.json()
         return data.get("count", 0)
@@ -83,7 +83,7 @@ def get_vehicle_count_last_hour():
 def read_log_file(log_file_name):
     """Reads a log file content from the API."""
     try:
-        params = {"name": log_file_name}
+        params = {"table": log_file_name}
         response = requests.get(f"{API_URL}:8000/logs", params=params, timeout=5)
         response.raise_for_status()
         data = response.text

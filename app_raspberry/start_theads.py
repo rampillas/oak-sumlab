@@ -25,7 +25,7 @@ def log_to_db(level, message):
         conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
         cursor = conn.cursor()
         cursor.execute(
-            "INSERT INTO guardar_horario_logs (timestamp, level, message) VALUES (NOW(), %s, %s)",
+            "INSERT INTO start_threads_logs (timestamp, level, message) VALUES (NOW(), %s, %s)",
             (level, message)
         )
         conn.commit()
