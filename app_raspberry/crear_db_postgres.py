@@ -7,7 +7,8 @@ PG_ADMIN_USER = "postgres"
 PG_ADMIN_PASSWORD = "Madremia902"  # Cambiar por la contraseña real del superusuario
 
 DB_NAME = "logs"
-DB_USER = "logs_users"
+DB_USER = "postgres"
+
 DB_PASSWORD = "Madremia902"
 
 # Lista de fuentes de logs para las que se crearán tablas
@@ -30,13 +31,6 @@ def create_database_and_user():
         cursor.execute(f"CREATE DATABASE {DB_NAME};")
         print(f"✅ Base de datos '{DB_NAME}' creada.")
 
-        # Crear usuario
-        cursor.execute(f"CREATE USER {DB_USER} WITH ENCRYPTED PASSWORD '{DB_PASSWORD}';")
-        print(f"✅ Usuario '{DB_USER}' creado.")
-
-        # Otorgar permisos
-        cursor.execute(f"GRANT ALL PRIVILEGES ON DATABASE {DB_NAME} TO {DB_USER};")
-        print(f"✅ Permisos otorgados a '{DB_USER}' sobre '{DB_NAME}'.")
 
         cursor.close()
         conn.close()
