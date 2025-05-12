@@ -6,12 +6,14 @@ import numpy as np
 from datetime import datetime, timedelta
 import yaml
 from config_loader import load_config
+from streamlit_autorefresh import st_autorefresh
 
 # Load Config
 config = load_config()
 
 API_URL = config["api"]["host"]
-STATUS_FILE = config["data"]["status_file"]
+#STATUS_FILE = config["data"]["status_file"]
+MONITORED_LOGS = config["logging"]["monitored_logs"]
 SUM_LAB_LOGO = config["data"]["sumlab_logo"]
 EU_FOOTER = config["data"]["eu_footer"]
 PREVIEW_REFRESH_RATE = 0.5  # Refresh rate for camera preview in seconds
@@ -22,9 +24,10 @@ def get_detection_history(show_image):
     """Retrieves detection history from the API."""
     try:
         params = {"show_image": str(show_image).lower()}
-        response = requests.get(f"{API_URL}/detections", params=params, timeout=5)
+        response = requests.get(f"{API_URL}:8000/detections", params=params, timeout=5)
         response.raise_for_status()
-        return response.json()
+        data = response.json()
+        return data.get("detections", [])
     except requests.exceptions.RequestException as e:
         st.error(f"Error retrieving detection history: {e}")
         return []
@@ -36,7 +39,7 @@ def update_config(send_image, preview_refresh_rate):
             "send_image": send_image,
             "refresh_rate": preview_refresh_rate
         }
-        response = requests.post(f"{API_URL}/config", json=payload, timeout=5)
+        response = requests.post(f"{API_URL}:8000/config", json=payload, timeout=5)
         response.raise_for_status()
         return True
     except requests.exceptions.RequestException as e:
@@ -46,7 +49,7 @@ def update_config(send_image, preview_refresh_rate):
 def get_last_preview_image():
     """Retrieves the last preview image from the API."""
     try:
-        response = requests.get(f"{API_URL}/preview_image", timeout=5)
+        response = requests.get(f"{API_URL}:8000/preview_image", timeout=5)
         response.raise_for_status()
         data = response.json()
         image_data = data.get("image_data")
@@ -58,7 +61,7 @@ def get_last_preview_image():
 def get_last_upload_time():
     """Retrieves the last upload time from the API."""
     try:
-        response = requests.get(f"{API_URL}/last_upload_time", timeout=5)
+        response = requests.get(f"{API_URL}:8000/last_upload_time", timeout=5)
         response.raise_for_status()
         data = response.json()
         return data.get("last_upload_time", "N/A")
@@ -69,7 +72,7 @@ def get_last_upload_time():
 def get_vehicle_count_last_hour():
     """Gets the number of vehicles detected in the last hour from the API."""
     try:
-        response = requests.get(f"{API_URL}/vehicle_count_last_hour", timeout=5)
+        response = requests.get(f"{API_URL}:8000/vehicle_count_last_hour", timeout=5)
         response.raise_for_status()
         data = response.json()
         return data.get("count", 0)
@@ -81,7 +84,7 @@ def read_log_file(log_file_name):
     """Reads a log file content from the API."""
     try:
         params = {"name": log_file_name}
-        response = requests.get(f"{API_URL}/logs", params=params, timeout=5)
+        response = requests.get(f"{API_URL}:8000/logs", params=params, timeout=5)
         response.raise_for_status()
         data = response.text
         return data
@@ -91,7 +94,7 @@ def read_log_file(log_file_name):
 def get_thread_status(thread_name):
     """Checks if a thread is running based on the API status endpoint."""
     try:
-        response = requests.get(f"{API_URL}/status", timeout=5)
+        response = requests.get(f"{API_URL}:8000/status", timeout=5)
         response.raise_for_status()
         status = response.json()
         return status.get(thread_name, 0) == 1
@@ -224,26 +227,32 @@ if st.session_state.page == "Main View":
         # Placeholder for the image
         frame_placeholder = st.empty()
 
-    # Main loop (only for data retrieval and display)
-    while True:
-        if st.session_state.table_refresh:
-            detections = get_detection_history(st.session_state.show_image)
-            import pandas as pd
-            df = pd.DataFrame(detections)
-            if 'image' in df.columns:
-                df = df.drop(columns=['image'])
-            tabla_placeholder.dataframe(df)
-        if st.session_state.show_image:
-            image_data_base64 = get_last_preview_image()
-            if image_data_base64:
-                import base64
-                image_bytes = base64.b64decode(image_data_base64)
-                nparr = np.frombuffer(image_bytes, np.uint8)
-                frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-                frame_placeholder.image(frame, channels="BGR", use_container_width=True)
+    # Use st_autorefresh to refresh the page automatically if table_refresh or show_image is enabled
+    refresh_interval = int(st.session_state.preview_refresh_rate * 1000) if (st.session_state.table_refresh or st.session_state.show_image) else 0
+    count = st_autorefresh(interval=refresh_interval, limit=None, key="datarefresh")
+
+    if st.session_state.table_refresh:
+        detections = get_detection_history(st.session_state.show_image)
+        import pandas as pd
+        df = pd.DataFrame(detections)
+        if 'image' in df.columns:
+            df = df.drop(columns=['image'])
+        tabla_placeholder.dataframe(df)
+    else:
+        tabla_placeholder.empty()
+
+    if st.session_state.show_image:
+        image_data_base64 = get_last_preview_image()
+        if image_data_base64:
+            import base64
+            image_bytes = base64.b64decode(image_data_base64)
+            nparr = np.frombuffer(image_bytes, np.uint8)
+            frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+            frame_placeholder.image(frame, channels="BGR", use_container_width=True)
         else:
             frame_placeholder.empty()
-        time.sleep(st.session_state.preview_refresh_rate)  # Adjust refresh rate as needed (e.g., every 0.5 seconds)
+    else:
+        frame_placeholder.empty()
 
 # --- Monitoring Page ---
 elif st.session_state.page == "Monitoring":
@@ -312,4 +321,4 @@ elif st.session_state.page == "Monitoring":
                          key=f"log_{log_file}", disabled=True)
 
     time.sleep(5)  # refresh time
-    st.experimental_rerun()
+    st.rerun()
