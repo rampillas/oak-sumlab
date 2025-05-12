@@ -61,17 +61,17 @@ def create_status_file(lock):
     with lock:
         with open(config["data"]["status_file"], "w") as f:
             yaml.dump(initial_status, f)
-            log_to_db("INFO", f"🔄 Status file created in {config['data']['status_file']}", "start_threads")
+            log_to_db("INFO", f"🔄 Status file created in {config['data']['status_file']}")
 
 
 def camera_service_wrapper(lock):
     """Wrapper for camera_service.main with error handling."""
     try:
         update_status("camera_service", 1, lock)
-        log_to_db("INFO", "🔄 Starting camera_service...", "start_threads")
+        log_to_db("INFO", "🔄 Starting camera_service...")
         run_camera_service(lock)
     except Exception as e:
-        log_to_db("ERROR", f"❌❌❌ An error in camera_service occurred: {e}", "start_threads")
+        log_to_db("ERROR", f"❌❌❌ An error in camera_service occurred: {e}")
         traceback.print_exc()
         update_status("camera_service", 0, lock)
 
@@ -80,10 +80,10 @@ def send_hourly_data_wrapper(lock):
     """Wrapper for send_hourly_data with error handling."""
     try:
         update_status("send_hourly_data", 1, lock)
-        log_to_db("INFO", "🔄 Starting send_hourly_data...", "start_threads")
+        log_to_db("INFO", "🔄 Starting send_hourly_data...")
         send_hourly_data(lock)
     except Exception as e:
-        log_to_db("ERROR", f"❌❌❌ An error in send_hourly_data occurred: {e}", "start_threads")
+        log_to_db("ERROR", f"❌❌❌ An error in send_hourly_data occurred: {e}")
         traceback.print_exc()
         update_status("send_hourly_data", 0, lock)
 
@@ -92,10 +92,10 @@ def delete_old_images_wrapper(lock):
     """Wrapper for delete_old_images with error handling."""
     try:
         update_status("delete_old_images", 1, lock)
-        log_to_db("INFO", "🔄 Starting delete_old_images...", "start_threads")
+        log_to_db("INFO", "🔄 Starting delete_old_images...")
         delete_old_images(lock)
     except Exception as e:
-        log_to_db("ERROR", f"❌❌❌ An error in delete_old_images occurred: {e}", "start_threads")
+        log_to_db("ERROR", f"❌❌❌ An error in delete_old_images occurred: {e}")
         traceback.print_exc()
         update_status("delete_old_images", 0, lock)
 
@@ -104,10 +104,10 @@ def run_server_wrapper(lock):
     """Wrapper for run_server with error handling."""
     try:
         update_status("fastapi_server", 1, lock)
-        log_to_db("INFO", "🔄 Starting fastapi_server...", "start_threads")
+        log_to_db("INFO", "🔄 Starting fastapi_server...")
         run_server(lock)
     except Exception as e:
-        log_to_db("ERROR", f"❌❌❌ An error in fastapi occurred: {e}", "start_threads")
+        log_to_db("ERROR", f"❌❌❌ An error in fastapi occurred: {e}")
         traceback.print_exc()
         update_status("fastapi_server", 0, lock)
 
@@ -130,7 +130,7 @@ def main():
     delete_images_thread = threading.Thread(target=delete_old_images_wrapper, args=(yaml_lock,), daemon=True)
     fastapi_thread = threading.Thread(target=run_server_wrapper, args=(yaml_lock,), daemon=True)
 
-    log_to_db("INFO", f"🔄 Starting threads at {datetime.now()}", "start_threads")
+    log_to_db("INFO", f"🔄 Starting threads at {datetime.now()}")
     fastapi_thread.start()
     camera_thread.start()
     send_data_thread.start()
