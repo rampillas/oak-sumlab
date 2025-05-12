@@ -19,7 +19,7 @@ master_db:
 pg_db:
   host: localhost
   name: logs
-  user: logs_users
+  user: postgres
   password: Madremia902
 
 # --- Data Storage ---
