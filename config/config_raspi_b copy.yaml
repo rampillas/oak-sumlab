@@ -13,6 +13,12 @@ master_db:
   user: postgres
   password: Madremia902
 
+pg_db:
+  host: localhost
+  name: logs
+  user: postgres
+  password: Madremia902
+
 # --- Data Storage ---
 data:
   db_path: ../data/detections.db
