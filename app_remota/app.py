@@ -25,7 +25,7 @@ PREVIEW_REFRESH_RATE = 0.5  # Refresh rate for camera preview in seconds
 
 class ConfigPayload(BaseModel):
     send_image: bool
-    refresh_rate: float  # Puedes cambiar por condecimal(ge=0.1, le=5.0) si quieres validar rango exacto
+    refresh_rate_n: float  # Puedes cambiar por condecimal(ge=0.1, le=5.0) si quieres validar rango exacto
 
 
 # --- Helper Functions ---
