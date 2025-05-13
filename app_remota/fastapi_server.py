@@ -83,14 +83,7 @@ def create_master_db():
 # Run the db creation
 #create_master_db()
 
-# Pydantic model for the incoming data
-class DetectionData(BaseModel):
-    id: int
-    timestamp: str
-    vehicle_id: str
-    x_position: float
-    y_position: float
-    direction: str
+
 
 
 
@@ -121,52 +114,6 @@ def get_last_upload_time():
             conn.close()
 
 
-# Endpoint to receive data batches
-@app.post("/subir-detecciones")
-def receive_data_batch(data: List[DetectionData]):
-    """
-    Receives a batch of detection data and stores it in the master database.
-    Args:
-        data (List[DetectionData]): A list of detection data items to be stored.
-    Returns:
-        dict: A message indicating the success of the operation.
-    Raises:
-        HTTPException: If there is an error storing the data in the database.
-    """
-    conn = None
-    try:
-        conn = psycopg2.connect(
-            host=MASTER_DB_HOST,
-            database=MASTER_DB_NAME,
-            user=MASTER_DB_USER,
-            password=MASTER_DB_PASSWORD,
-        )
-        cursor = conn.cursor()
-
-        # Get the latest timestamp from the data
-        latest_timestamp = max(item.timestamp for item in data)
-
-        for item in data:
-            cursor.execute(
-                "INSERT INTO master_detections (timestamp, vehicle_id, x_position, y_position, direction) VALUES (%s, %s, %s, %s, %s)",
-                (item.timestamp, item.vehicle_id, item.x_position, item.y_position, item.direction),
-            )
-        conn.commit()
-        print("INFO", f"✅ Data batch received and stored: {len(data)} items")
-
-        # Update the last upload time with the latest timestamp from the data
-        cursor.execute("INSERT INTO last_upload (last_upload_time) VALUES (%s)", (latest_timestamp,))
-        conn.commit()
-
-        return {"message": "Data batch received and stored successfully"}
-
-    except Exception as e:
-        if conn:
-            conn.rollback()
-        raise HTTPException(status_code=500, detail=f"Error storing data: {e}")
-    finally:
-        if conn:
-            conn.close()
 
 
 # Endpoint to receive alerts
@@ -214,6 +161,132 @@ def vehicle_count_last_hour():
         return {"count": count}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error fetching vehicle count: {e}")
+    finally:
+        if conn:
+            conn.close()
+
+
+# Pydantic model for the incoming data
+class DetectionData(BaseModel):
+    id: int
+    timestamp: str
+    vehicle_id: str
+    x_position: float
+    y_position: float
+    direction: str
+    image: Optional[str] = None  # Base64 encoded image data
+# Endpoint to receive data batches
+
+# Endpoint to receive data batches
+@app.post("/subir-detecciones")
+def receive_data_batch(data: List[DetectionData]):
+    """
+    Receives a batch of detection data and stores it in the master database.
+    Args:
+        data (List[DetectionData]): A list of detection data items to be stored.
+    Returns:
+        dict: A message indicating the success of the operation.
+    Raises:
+        HTTPException: If there is an error storing the data in the database.
+    """
+    conn = None
+    try:
+        conn = psycopg2.connect(
+            host=MASTER_DB_HOST,
+            database=MASTER_DB_NAME,
+            user=MASTER_DB_USER,
+            password=MASTER_DB_PASSWORD,
+        )
+        cursor = conn.cursor()
+
+        # Get the latest timestamp from the data
+        latest_timestamp = max(item.timestamp for item in data)
+
+        if not data.image:
+            # If no image is provided, set it to None
+            for item in data:
+                item.image = None
+        
+        for item in data:
+            cursor.execute(
+                "INSERT INTO master_detections (timestamp, vehicle_id, x_position, y_position, direction, image) VALUES (%s, %s, %s, %s, %s, %s)",
+                (item.timestamp, item.vehicle_id, item.x_position, item.y_position, item.direction, item.image),
+            )
+        conn.commit()
+        print("INFO", f"✅ Data batch received and stored: {len(data)} items")
+
+        # Update the last upload time with the latest timestamp from the data
+        cursor.execute("INSERT INTO last_upload (last_upload_time) VALUES (%s)", (latest_timestamp,))
+        conn.commit()
+
+        return {"message": "Data batch received and stored successfully"}
+
+    except Exception as e:
+        if conn:
+            conn.rollback()
+        raise HTTPException(status_code=500, detail=f"Error storing data: {e}")
+    finally:
+        if conn:
+            conn.close()
+
+
+@app.get("/detections", response_model=List[DetectionData])
+def get_detections(
+    start_date: Optional[str] = Query(None, description="Start date in YYYY-MM-DDTHH:MM:SS format"),
+    end_date: Optional[str] = Query(None, description="End date in YYYY-MM-DDTHH:MM:SS format"),
+    direction: Optional[str] = Query("both", regex="^(ascending|descending|both)$", description="Direction filter: 'ascending', 'descending' or 'both'")
+
+):
+    """
+    Returns a list of detections filtered by optional start_date, end_date and direction.
+    """
+    conn = None
+    try:
+        conn = psycopg2.connect(
+            host=MASTER_DB_HOST,
+            database=MASTER_DB_NAME,
+            user=MASTER_DB_USER,
+            password=MASTER_DB_PASSWORD,
+        )
+        cursor = conn.cursor()
+
+        query = "SELECT id, timestamp, vehicle_id, x_position, y_position, direction, image FROM master_detections"
+        conditions = []
+        params = []
+
+        if start_date:
+            conditions.append("timestamp >= %s")
+            params.append(start_date)
+        if end_date:
+            conditions.append("timestamp <= %s")
+            params.append(end_date)
+        if direction and direction != "both":
+            conditions.append("direction = %s")
+            params.append(direction)
+
+        if conditions:
+            query += " WHERE " + " AND ".join(conditions)
+
+        
+
+        cursor.execute(query, tuple(params))
+        rows = cursor.fetchall()
+
+        detections = [
+            DetectionData(
+                id=row[0],
+                timestamp=row[1],
+                vehicle_id=row[2],
+                x_position=row[3],
+                y_position=row[4],
+                direction=row[5]
+            )
+            for row in rows
+        ]
+        return detections
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error fetching detections: {e}")
     finally:
         if conn:
             conn.close()

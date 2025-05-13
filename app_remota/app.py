@@ -8,6 +8,7 @@ import yaml
 from config_loader import load_config
 from streamlit_autorefresh import st_autorefresh
 from pydantic import BaseModel,ValidationError, condecimal
+import base64
 
 
 # Load Config
@@ -30,11 +31,10 @@ class ConfigPayload(BaseModel):
 
 # --- Helper Functions ---
 
-def get_detection_history(show_image):
+def get_detection_history():
     """Retrieves detection history from the API."""
     try:
-        params = {"show_image": str(show_image).lower()}
-        response = requests.get(f"http://localhost:8000/detections", params=params, timeout=5)
+        response = requests.get(f"{API_URL}:8000/detections", timeout=5)
         response.raise_for_status()
         data = response.json()
         return data.get("detections", [])
@@ -47,8 +47,8 @@ def update_config(send_image, preview_refresh_rate):
     print(f"Updating config: send_image={send_image}, preview_refresh_rate={preview_refresh_rate}")
     try:
         payload = ConfigPayload(send_image=bool(send_image), refresh_rate_n=float(preview_refresh_rate))
-        print(f"Validated payload: {payload.model_dump_json()}")
-        response = requests.post(f"{API_URL}:8000/config", json=payload.model_dump(), timeout=5)
+        #print(f"Validated payload: {payload.model_dump_json()}")
+        response = requests.post(f"{API_URL}:8000/config", json=payload.dict(), timeout=5)
         response.raise_for_status()
         return True
     except requests.exceptions.RequestException as e:
@@ -240,16 +240,13 @@ if st.session_state.page == "Main View":
     # Main loop (only for data retrieval and display)
     while True:
         if st.session_state.table_refresh:
-            df = get_detection_history(st.session_state.table_refresh)
-            # Remove the 'image' column if it exists
-            if 'image' in df.columns:
-                df = df.drop(columns=['image'])
-
+            df = get_detection_history()
             tabla_placeholder.dataframe(df)
         if st.session_state.show_image:
             image_data = get_last_preview_image()
             if image_data:
-                nparr = np.frombuffer(image_data, np.uint8)
+                image_bytes = base64.b64decode(image_data)
+                nparr = np.frombuffer(image_bytes, np.uint8)
                 frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
                 frame_placeholder.image(frame, channels="BGR", use_container_width=True)
         

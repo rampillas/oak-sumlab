@@ -141,7 +141,8 @@ def send_hourly_data(lock): # Receive the lock as a parameter
                             "vehicle_id": row[2],
                             "x_position": row[3],
                             "y_position": row[4],
-                            "direction": row[5]
+                            "direction": row[5],
+                            "image": row[6]
                         }
                         for row in data
                     ]

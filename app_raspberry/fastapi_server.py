@@ -138,7 +138,7 @@ class DetectionData(BaseModel):
     y_position: float
     direction: str
 
-@app.get("/ultima imagen")
+@app.get("/ultima-imagen")
 def get_last_image():   
     """Returns the last image from the master database."""
     with conn_lock:
@@ -176,77 +176,7 @@ def get_last_upload_time():
             conn.close()
 
 
-# Endpoint to receive data batches
-@app.post("/subir-detecciones")
-def receive_data_batch(data: List[DetectionData]):
-    """
-    Receives a batch of detection data and stores it in the master database.
-    Args:
-        data (List[DetectionData]): A list of detection data items to be stored.
-    Returns:
-        dict: A message indicating the success of the operation.
-    Raises:
-        HTTPException: If there is an error storing the data in the database.
-    """
-    conn = None
-    try:
-        conn = psycopg2.connect(
-            host=MASTER_DB_HOST,
-            database=MASTER_DB_NAME,
-            user=MASTER_DB_USER,
-            password=MASTER_DB_PASSWORD,
-        )
-        cursor = conn.cursor()
 
-        # Get the latest timestamp from the data
-        latest_timestamp = max(item.timestamp for item in data)
-
-        for item in data:
-            cursor.execute(
-                "INSERT INTO master_detections (timestamp, vehicle_id, x_position, y_position, direction) VALUES (%s, %s, %s, %s, %s)",
-                (item.timestamp, item.vehicle_id, item.x_position, item.y_position, item.direction),
-            )
-        conn.commit()
-        with log_lock:
-            log_to_db("INFO", f"✅ Data batch received and stored: {len(data)} items")
-
-        # Update the last upload time with the latest timestamp from the data
-        cursor.execute("INSERT INTO last_upload (last_upload_time) VALUES (%s)", (latest_timestamp,))
-        conn.commit()
-
-        return {"message": "Data batch received and stored successfully"}
-
-    except Exception as e:
-        if conn:
-            conn.rollback()
-        raise HTTPException(status_code=500, detail=f"Error storing data: {e}")
-    finally:
-        if conn:
-            conn.close()
-
-
-# Endpoint to receive alerts
-class AlertData(BaseModel):
-    timestamp: str
-    vehicle_id: str
-    x_position: float
-    y_position: float
-    alert: str
-
-
-@app.post("/alerta")
-def receive_alert(data: AlertData):
-    """Receives an alert."""
-    conn = None
-    try:
-        with log_lock:
-            log_to_db("INFO", f"🔔 Alert received: {data}")
-        return {"message": "Alert received successfully", "alert": data.alert}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error receiving alert: {e}")
-    finally:
-        if conn:
-            conn.close()
 
 
 @app.get("/detections")
