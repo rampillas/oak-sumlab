@@ -389,7 +389,7 @@ def get_status():
 
 class ConfigUpdate(BaseModel):
     send_image: bool
-    refresh_rate: int
+    refresh_rate: float
 
 @app.post("/config")
 def update_config(config_data: ConfigUpdate):
@@ -399,10 +399,7 @@ def update_config(config_data: ConfigUpdate):
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
         try:
-            cursor.execute("""
-                DROP TABLE IF EXISTS config 
-                
-            """)
+            
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS config (
                     id INTEGER PRIMARY KEY,
