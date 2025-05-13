@@ -399,7 +399,7 @@ def update_config(config_data: ConfigUpdate):
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
         try:
-            
+            cursor.execute(""" drop table if exists config""")
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS config (
                     id INTEGER PRIMARY KEY,
@@ -418,6 +418,8 @@ def update_config(config_data: ConfigUpdate):
             return {"message": "Config updated successfully"}
         except Exception as e:
             conn.rollback()
+            with log_lock:
+                log_to_db("ERROR", f"❌ Error updating config: {e}")
             raise HTTPException(status_code=500, detail=f"Error updating config: {e}")
         finally:
             conn.close()
