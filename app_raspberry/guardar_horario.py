@@ -185,7 +185,7 @@ def send_hourly_data(lock): # Receive the lock as a parameter
                 log_to_db("ERROR", f"❌ An unexpected error occurred: {e}")
                 traceback.print_exc()
             send_alert(vehicle_id="SYSTEM", x_pos=0, y_pos=0, alert_type=f"send_hourly_data FAILED.")
-            time.sleep(60)  # Wait a minute before retrying
+            time.sleep(5)  # Wait a minute before retrying
 
 def delete_old_images(lock): # Receive the lock as a parameter
     """Deletes images from the database older than DELETE_IMAGES_INTERVAL seconds."""
