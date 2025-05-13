@@ -61,7 +61,7 @@ logging:
 
 # --- Application-Specific Settings ---
 application:
-  keep_contrary_images: False
+  keep_contrary_images: True
   max_retries: 3
   api_alert_url: http://172.29.79.150:8000/alerta
   api_batch_url: http://172.29.79.150:8000/subir-detecciones

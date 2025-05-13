@@ -128,8 +128,7 @@ def save_detection(vehicle_id, x_pos, y_pos, direction, image_data=None):
             (timestamp, vehicle_id, x_pos, y_pos, direction, image_data),
         )
         conn.commit()
-        with log_lock:
-            log_to_db("DEBUG", f"✅ Detection saved: {vehicle_id} at ({x_pos}, {y_pos}) in direction {direction}")
+        
     except sqlite3.Error as e:
         with log_lock:
             log_to_db("ERROR", f"❌ Error saving detection: {e}")
@@ -280,8 +279,8 @@ def run_camera(pipeline):
     Runs the camera detection process.
     """
     with dai.Device(pipeline) as device:
-        device.setIrFloodLightIntensity(0.5)
-        device.setIrLaserDotProjectorIntensity(0.5) 
+        device.setIrFloodLightIntensity(1)
+        device.setIrLaserDotProjectorIntensity(1) 
         q_nn = device.getOutputQueue(name="detections", maxSize=4, blocking=False)
         q_video = device.getOutputQueue(name="video", maxSize=4, blocking=False)
 
@@ -387,6 +386,8 @@ def run_camera(pipeline):
                                     frame_count=0
                                 else:
                                     frame_count+=1
+                            else:
+                                image_data = cv2.imencode(".jpg", frame)[1].tobytes()
 
                             save_detection(
                                 vehicle_id, x_center, y_center, last_position, image_data
@@ -412,7 +413,7 @@ def run_camera(pipeline):
             except Exception as e:
                 with log_lock:
                     log_to_db("ERROR", f"❌ Error in camera operation: {e}")
-                traceback.print_exc()
+                #traceback.print_exc()
 
 
 def main(lock=None):  # Receive the lock as a parameter

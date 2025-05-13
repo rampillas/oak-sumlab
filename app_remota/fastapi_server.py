@@ -202,10 +202,7 @@ def receive_data_batch(data: List[DetectionData]):
         # Get the latest timestamp from the data
         latest_timestamp = max(item.timestamp for item in data)
 
-        if not data.image:
-            # If no image is provided, set it to None
-            for item in data:
-                item.image = None
+
         
         for item in data:
             cursor.execute(
@@ -268,7 +265,8 @@ def get_detections(
             query += " WHERE " + " AND ".join(conditions)
 
         
-
+        # Add ORDER BY clause to sort by timestamp
+        query += " ORDER BY timestamp DESC"
         cursor.execute(query, tuple(params))
         rows = cursor.fetchall()
 

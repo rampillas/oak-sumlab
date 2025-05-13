@@ -174,6 +174,10 @@ if st.sidebar.button("🏠 Main View"):
 if st.sidebar.button("📊 Monitoring"):
     st.session_state.page = "Monitoring"
 
+# New: Detection Query page
+if st.sidebar.button("📅 Detection Query"):
+    st.session_state.page = "Detection Query"
+
 st.sidebar.divider()
 
 st.sidebar.text("Control de procesos")
@@ -198,6 +202,22 @@ st.sidebar.markdown(
 st.sidebar.image(EU_FOOTER)
 
 # --- Main View ---
+def get_filtered_detections(start_date, end_date, direction):
+    """Fetch filtered detections from the API."""
+    try:
+        params = {
+            "start_date": start_date,
+            "end_date": end_date,
+            "direction": direction
+        }
+        response = requests.get(f"http://localhost:8000/detections", params=params, timeout=5)
+        response.raise_for_status()
+        data = response.json()
+        return data
+    except requests.exceptions.RequestException as e:
+        st.error(f"Error retrieving filtered detections: {e}")
+        return []
+
 # --- Main View ---
 if st.session_state.page == "Main View":
     # Initialize Streamlit
@@ -255,7 +275,6 @@ if st.session_state.page == "Main View":
         time.sleep(st.session_state.preview_refresh_rate)  # Adjust refresh rate as needed (e.g., every 0.5 seconds)
 
 
-# --- Monitoring Page ---
 elif st.session_state.page == "Monitoring":
     st.title("📊 System Monitoring")
 
@@ -324,3 +343,18 @@ elif st.session_state.page == "Monitoring":
 
     time.sleep(st.session_state.log_refresh_interval)  # refresh time
     st.rerun()
+
+elif st.session_state.page == "Detection Query":
+    st.title("📅 Detection Query")
+    st.markdown("Filtra las detecciones por fecha y dirección.")
+    col1, col2 = st.columns(2)
+    with col1:
+        start_date = st.date_input("Start date", value=datetime.now().date() - timedelta(days=7))
+    with col2:
+        end_date = st.date_input("End date", value=datetime.now().date())
+    direction = st.selectbox("Direction", options=["ascending", "descending", "both"], index=2)
+    search = st.button("🔍 Search")
+    result_placeholder = st.empty()
+    if search:
+        filtered = get_filtered_detections(str(start_date)+" 00:00:00", str(end_date)+" 23:59:59", direction)
+        result_placeholder.dataframe(filtered)
