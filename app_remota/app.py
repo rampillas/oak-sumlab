@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import requests
 import time
 import cv2
@@ -34,7 +35,7 @@ class ConfigPayload(BaseModel):
 def get_detection_history():
     """Retrieves detection history from the API."""
     try:
-        response = requests.get(f"{API_URL}:8000/detections", timeout=5)
+        response = requests.get(f"{API_URL}:8000/detections", timeout=15)
         response.raise_for_status()
         data = response.json()
         return data.get("detections", [])
@@ -202,15 +203,24 @@ st.sidebar.markdown(
 st.sidebar.image(EU_FOOTER)
 
 # --- Main View ---
-def get_filtered_detections(start_date, end_date, direction):
-    """Fetch filtered detections from the API."""
+def get_filtered_detections(start_date, end_date, direction, limite):
+    """Fetch filtered detections from the API.
+    Expects start_date and end_date as datetime.date objects, constructs ISO datetime strings."""
     try:
-        params = {
-            "start_date": start_date,
-            "end_date": end_date,
-            "direction": direction
-        }
-        response = requests.get(f"http://localhost:8000/detections", params=params, timeout=5)
+        if limite:
+            params = {
+                "start_date": start_date.isoformat() + "T00:00:00",
+                "end_date": end_date.isoformat() + "T23:59:59",
+                "direction": direction,
+                "limite": limite
+            }
+        else:
+            params = {
+                "start_date": start_date.isoformat() + "T00:00:00",
+                "end_date": end_date.isoformat() + "T23:59:59",
+                "direction": direction
+            }
+        response = requests.get(f"http://localhost:8000/detections", params=params, timeout=15)
         response.raise_for_status()
         data = response.json()
         return data
@@ -346,15 +356,66 @@ elif st.session_state.page == "Monitoring":
 
 elif st.session_state.page == "Detection Query":
     st.title("📅 Detection Query")
-    st.markdown("Filtra las detecciones por fecha y dirección.")
+
+    from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
+    import pandas as pd
+
     col1, col2 = st.columns(2)
     with col1:
         start_date = st.date_input("Start date", value=datetime.now().date() - timedelta(days=7))
     with col2:
         end_date = st.date_input("End date", value=datetime.now().date())
     direction = st.selectbox("Direction", options=["ascending", "descending", "both"], index=2)
+    limite = st.number_input("Límite de resultados", min_value=0, max_value=1000000, value=100, step=1)
+    st.text('Con limite=0 se muestran todos los resultados')
     search = st.button("🔍 Search")
-    result_placeholder = st.empty()
+
     if search:
-        filtered = get_filtered_detections(str(start_date)+" 00:00:00", str(end_date)+" 23:59:59", direction)
-        result_placeholder.dataframe(filtered)
+        if limite == 0:
+            limite = None
+        filtered = get_filtered_detections(start_date, end_date, direction, limite)
+        if isinstance(filtered, list):
+            st.session_state.filtered_df = pd.DataFrame(filtered)
+        elif isinstance(filtered, dict):
+            st.session_state.filtered_df = pd.DataFrame([filtered])
+        else:
+            st.session_state.filtered_df = filtered
+
+    if "filtered_df" in st.session_state and not st.session_state.filtered_df.empty:
+        df = st.session_state.filtered_df
+        df = df.drop(columns=['image', 'x_position', 'y_position'], errors='ignore')
+        col_left, col_right = st.columns([2, 1])
+
+        with col_left:
+            gb = GridOptionsBuilder.from_dataframe(df)
+            gb.configure_selection('single', use_checkbox=True)
+            gb.configure_pagination(enabled=True)
+            gb.configure_default_column(groupable=True, value=True, enableRowGroup=True, editable=False)
+            grid_options = gb.build()
+            grid_return = AgGrid(
+                df,
+                gridOptions=grid_options,
+                update_mode=GridUpdateMode.SELECTION_CHANGED,
+                theme='streamlit',
+                height=600,
+                fit_columns_on_grid_load=True,
+                key="aggrid_detection_query"
+            )
+            selected_rows = grid_return.get("selected_rows", [])
+
+        with col_right:
+            if  len(selected_rows) > 0:
+                row=selected_rows.iloc[0]
+                st.markdown("### 📷 Captura seleccionada")
+                st.write("**Detalles:**")
+                st.json(row.to_json())
+                if 'image' in row and row['image']:
+                    try:
+                        image_bytes = base64.b64decode(row['image'])
+                        nparr = np.frombuffer(image_bytes, np.uint8)
+                        frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+                        st.image(frame, channels="BGR", use_container_width=True)
+                    except Exception as e:
+                        st.warning(f"No se pudo decodificar la imagen: {e}")
+            else:
+                st.info("Selecciona una fila en la tabla para ver la imagen y detalles aquí.")

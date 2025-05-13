@@ -227,13 +227,21 @@ def receive_data_batch(data: List[DetectionData]):
         if conn:
             conn.close()
 
+class DetectionDataReturn(BaseModel):
+    id: int
+    timestamp: datetime
+    vehicle_id: str
+    x_position: float
+    y_position: float
+    direction: str
+    image: Optional[str] = None  # Base64 encoded image data
 
-@app.get("/detections", response_model=List[DetectionData])
+@app.get("/detections", response_model=List[DetectionDataReturn])
 def get_detections(
-    start_date: Optional[str] = Query(None, description="Start date in YYYY-MM-DDTHH:MM:SS format"),
-    end_date: Optional[str] = Query(None, description="End date in YYYY-MM-DDTHH:MM:SS format"),
-    direction: Optional[str] = Query("both", regex="^(ascending|descending|both)$", description="Direction filter: 'ascending', 'descending' or 'both'")
-
+    start_date: Optional[datetime] = Query(None, description="Start date in YYYY-MM-DDTHH:MM:SS format"),
+    end_date: Optional[datetime] = Query(None, description="End date in YYYY-MM-DDTHH:MM:SS format"),
+    direction: Optional[str] = Query("both", regex="^(ascending|descending|both)$", description="Direction filter: 'ascending', 'descending' or 'both'"),
+    limit: Optional[int] = Query(100, ge=1, le=1000000, description="Limit the number of results returned (default: 100, max: 1000)")
 ):
     """
     Returns a list of detections filtered by optional start_date, end_date and direction.
@@ -254,37 +262,47 @@ def get_detections(
 
         if start_date:
             conditions.append("timestamp >= %s")
-            params.append(start_date)
+            params.append(start_date.isoformat())
         if end_date:
             conditions.append("timestamp <= %s")
-            params.append(end_date)
+            params.append(end_date.isoformat())
         if direction and direction != "both":
             conditions.append("direction = %s")
             params.append(direction)
+        
 
         if conditions:
             query += " WHERE " + " AND ".join(conditions)
 
         
+        
         # Add ORDER BY clause to sort by timestamp
         query += " ORDER BY timestamp DESC"
+        if limit:
+            query += " LIMIT %s"
+            params.append(limit)
+
         cursor.execute(query, tuple(params))
         rows = cursor.fetchall()
 
+        print(query)
+
         detections = [
-            DetectionData(
+            DetectionDataReturn(
                 id=row[0],
                 timestamp=row[1],
                 vehicle_id=row[2],
                 x_position=row[3],
                 y_position=row[4],
-                direction=row[5]
+                direction=row[5],
+                image=row[6]  # Base64 encoded image data
             )
             for row in rows
         ]
         return detections
 
     except Exception as e:
+        raise
         raise HTTPException(status_code=500, detail=f"Error fetching detections: {e}")
     finally:
         if conn:
