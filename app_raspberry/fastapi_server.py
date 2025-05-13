@@ -400,10 +400,14 @@ def update_config(config_data: ConfigUpdate):
         cursor = conn.cursor()
         try:
             cursor.execute("""
+                DROP TABLE IF EXISTS config 
+                
+            """)
+            cursor.execute("""
                 CREATE TABLE IF NOT EXISTS config (
                     id INTEGER PRIMARY KEY,
                     send_image BOOLEAN,
-                    refresh_rate INTEGER
+                    refresh_rate REAL
                 )
             """)
             cursor.execute("SELECT id FROM config WHERE id=1")

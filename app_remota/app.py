@@ -34,10 +34,11 @@ def get_detection_history(show_image):
 
 def update_config(send_image, preview_refresh_rate):
     """Updates the send_image and preview refresh rate via API."""
+    print(f"Updating config: send_image={send_image}, preview_refresh_rate={preview_refresh_rate}")
     try:
         payload = {
-            "send_image": send_image,
-            "refresh_rate": preview_refresh_rate
+            "send_image": bool(send_image),
+            "refresh_rate": float(preview_refresh_rate)
         }
         response = requests.post(f"{API_URL}:8000/config", json=payload, timeout=5)
         response.raise_for_status()
