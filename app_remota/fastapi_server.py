@@ -130,7 +130,7 @@ def receive_alert(data: AlertData):
     """Receives an alert."""
     conn = None
     try:
-        print("INFO", f"🔔 Alert received: {data}")
+        #print("INFO", f"🔔 Alert received: {data}")
         return {"message": "Alert received successfully", "alert": data.alert}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error receiving alert: {e}")
@@ -221,6 +221,7 @@ def receive_data_batch(data: List[DetectionData]):
     except Exception as e:
         if conn:
             conn.rollback()
+        raise
         raise HTTPException(status_code=500, detail=f"Error storing data: {e}")
     finally:
         if conn:

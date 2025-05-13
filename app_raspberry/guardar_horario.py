@@ -151,7 +151,7 @@ def send_hourly_data(lock): # Receive the lock as a parameter
 
                     while True:
                         try:
-                            response = requests.post(API_BATCH_URL, json=json_data, timeout=5)
+                            response = requests.post(API_BATCH_URL, json=json_data, timeout=30)
                             if response.status_code == 200:
                                 with log_lock:
                                     log_to_db("INFO",
