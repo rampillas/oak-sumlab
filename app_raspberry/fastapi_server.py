@@ -394,6 +394,7 @@ class ConfigUpdate(BaseModel):
 @app.post("/config")
 def update_config(config_data: ConfigUpdate):
     """Updates the config table in SQLite with send_image and refresh_rate."""
+    print(config_data)
     with conn_lock:
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()

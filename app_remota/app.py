@@ -145,6 +145,9 @@ if "show_preview" not in st.session_state:
 if "preview_refresh_rate" not in st.session_state:
     st.session_state.preview_refresh_rate = 0.5 # Default value
 
+if "log_refresh_interval" not in st.session_state:
+    st.session_state.log_refresh_interval = 10  # Default value for log & data refresh rate
+
 # --- Sidebar ---
 st.sidebar.image(SUM_LAB_LOGO)
 st.sidebar.divider()
@@ -186,6 +189,7 @@ st.sidebar.markdown(
 st.sidebar.image(EU_FOOTER)
 
 # --- Main View ---
+# --- Main View ---
 if st.session_state.page == "Main View":
     # Initialize Streamlit
     st.title("🚗 CIRCUIT: Car Detection System")
@@ -208,51 +212,42 @@ if st.session_state.page == "Main View":
         # Placeholder for the table
         tabla_placeholder = st.empty()
 
-        # Button to update preview refresh rate via API
-        if st.button("💾 Update Preview Refresh Rate"):
-            success = update_config(st.session_state.show_image, st.session_state.preview_refresh_rate)
-            if success:
-                st.success("Preview refresh rate updated successfully.")
-
     with col2:
         st.markdown(f"##### Preview refresh rate (actual: {st.session_state.preview_refresh_rate:.2f} s)")
         preview_refresh_rate_slider = st.slider("Preview refresh rate (s)", 0.1, 5.0, st.session_state.preview_refresh_rate, 0.1)
         if preview_refresh_rate_slider != st.session_state.preview_refresh_rate:
             st.session_state.preview_refresh_rate = preview_refresh_rate_slider
+            update_config(st.session_state.show_image, st.session_state.preview_refresh_rate)
             
         b2 = st.button("📸 Activate/Deactivate Camera Preview")
         if b2:
             st.session_state.show_image = not st.session_state.show_image
+            update_config(st.session_state.show_image, st.session_state.preview_refresh_rate)
+            
 
         # Placeholder for the image
         frame_placeholder = st.empty()
 
-    # Use st_autorefresh to refresh the page automatically if table_refresh or show_image is enabled
-    refresh_interval = int(st.session_state.preview_refresh_rate * 1000) if (st.session_state.table_refresh or st.session_state.show_image) else 0
-    count = st_autorefresh(interval=refresh_interval, limit=None, key="datarefresh")
+    # Main loop (only for data retrieval and display)
+    while True:
+        if st.session_state.table_refresh:
+            df = get_detection_history(st.session_state.table_refresh)
+            # Remove the 'image' column if it exists
+            if 'image' in df.columns:
+                df = df.drop(columns=['image'])
 
-    if st.session_state.table_refresh:
-        detections = get_detection_history(st.session_state.show_image)
-        import pandas as pd
-        df = pd.DataFrame(detections)
-        if 'image' in df.columns:
-            df = df.drop(columns=['image'])
-        tabla_placeholder.dataframe(df)
-    else:
-        tabla_placeholder.empty()
-
-    if st.session_state.show_image:
-        image_data_base64 = get_last_preview_image()
-        if image_data_base64:
-            import base64
-            image_bytes = base64.b64decode(image_data_base64)
-            nparr = np.frombuffer(image_bytes, np.uint8)
-            frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-            frame_placeholder.image(frame, channels="BGR", use_container_width=True)
-        else:
+            tabla_placeholder.dataframe(df)
+        if st.session_state.show_image:
+            image_data = get_last_preview_image()
+            if image_data:
+                nparr = np.frombuffer(image_data, np.uint8)
+                frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+                frame_placeholder.image(frame, channels="BGR", use_container_width=True)
+        
+        elif not st.session_state.show_image:
             frame_placeholder.empty()
-    else:
-        frame_placeholder.empty()
+        time.sleep(st.session_state.preview_refresh_rate)  # Adjust refresh rate as needed (e.g., every 0.5 seconds)
+
 
 # --- Monitoring Page ---
 elif st.session_state.page == "Monitoring":
@@ -295,12 +290,13 @@ elif st.session_state.page == "Monitoring":
 
         vehicle_count = get_vehicle_count_last_hour()
         st.markdown(f"Vehicles in Last Hour: {vehicle_count}")
+    
 
-        # Button to update preview refresh rate via API
-        if st.button("💾 Update Preview Refresh Rate (Monitoring)"):
-            success = update_config(st.session_state.show_image, st.session_state.preview_refresh_rate)
-            if success:
-                st.success("Preview refresh rate updated successfully.")
+        # Log & Data refresh rate slider added here
+        log_refresh_interval_slider = st.slider("Log & Data refresh rate (s)", 1, 60, st.session_state.log_refresh_interval, 1)
+        if log_refresh_interval_slider != st.session_state.log_refresh_interval:
+            st.session_state.log_refresh_interval = log_refresh_interval_slider
+
         
         st.markdown(f"Local DB Size: N/A")  # Removed DB size retrieval, replaced with N/A
 
@@ -320,5 +316,5 @@ elif st.session_state.page == "Monitoring":
             st.text_area(f"Log Content ({log_file})", value=st.session_state.last_log_content[log_file], height=200,
                          key=f"log_{log_file}", disabled=True)
 
-    time.sleep(5)  # refresh time
+    time.sleep(st.session_state.log_refresh_interval)  # refresh time
     st.rerun()

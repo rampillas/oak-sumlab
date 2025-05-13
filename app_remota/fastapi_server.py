@@ -192,11 +192,6 @@ def receive_alert(data: AlertData):
             conn.close()
 
 
-
-
-
-
-
 @app.get("/vehicle_count_last_hour")
 def vehicle_count_last_hour():
     """Returns the count of unique vehicles detected in the last hour."""
