@@ -10,6 +10,8 @@ import os
 import traceback
 import yaml  # Import the yaml library
 from config_loader import load_config #Import the function
+import base64
+
 
 # Load Config
 config = load_config()
@@ -142,7 +144,7 @@ def send_hourly_data(lock): # Receive the lock as a parameter
                             "x_position": row[3],
                             "y_position": row[4],
                             "direction": row[5],
-                            "image": row[6]
+                            "image": base64.b64encode(row[6]).decode('utf-8')
                         }
                         for row in data
                     ]
