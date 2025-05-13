@@ -144,7 +144,7 @@ def send_hourly_data(lock): # Receive the lock as a parameter
                             "x_position": row[3],
                             "y_position": row[4],
                             "direction": row[5],
-                            "image": base64.b64encode(row[6]).decode('utf-8')
+                            "image": base64.b64encode(row[6]).decode('utf-8') if row[6] else None,
                         }
                         for row in data
                     ]
