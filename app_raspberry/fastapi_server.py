@@ -388,12 +388,12 @@ def get_status():
         raise HTTPException(status_code=500, detail=f"Error reading status file: {e}")
 
 
-class ConfigUpdate(BaseModel):
+class ConfigUpdateObj(BaseModel):
     send_image: bool
-    refresh_rate: float
+    refresh_rate_n: float
 
 @app.post("/config")
-def update_config(config_data: ConfigUpdate):
+def update_config(config_data: ConfigUpdateObj):
     """Updates the config table in SQLite with send_image and refresh_rate."""
     print(config_data)
     with conn_lock:
@@ -410,10 +410,10 @@ def update_config(config_data: ConfigUpdate):
             cursor.execute("SELECT id FROM config WHERE id=1")
             if cursor.fetchone():
                 cursor.execute("UPDATE config SET send_image=?, refresh_rate=? WHERE id=1",
-                               (config_data.send_image, config_data.refresh_rate))
+                               (config_data.send_image, config_data.refresh_rate_n))
             else:
                 cursor.execute("INSERT INTO config (id, send_image, refresh_rate) VALUES (1, ?, ?)",
-                               (config_data.send_image, config_data.refresh_rate))
+                               (config_data.send_image, config_data.refresh_rate_n))
             conn.commit()
             return {"message": "Config updated successfully"}
         except Exception as e:
