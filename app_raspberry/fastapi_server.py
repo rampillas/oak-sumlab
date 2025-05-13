@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, Query
-from pydantic import BaseModel
+from pydantic import BaseModel,ValidationError, condecimal
 from datetime import datetime, timedelta
 from typing import List, Optional
 import psycopg2
@@ -11,6 +11,7 @@ import sqlite3
 import yaml
 import base64
 from config_loader import load_config
+
 
 
 
@@ -399,7 +400,6 @@ def update_config(config_data: ConfigUpdate):
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
         try:
-            cursor.execute(""" drop table if exists config""")
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS config (
                     id INTEGER PRIMARY KEY,

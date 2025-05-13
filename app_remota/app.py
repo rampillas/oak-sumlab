@@ -7,6 +7,8 @@ from datetime import datetime, timedelta
 import yaml
 from config_loader import load_config
 from streamlit_autorefresh import st_autorefresh
+from pydantic import BaseModel,ValidationError, condecimal
+
 
 # Load Config
 config = load_config()
@@ -17,6 +19,14 @@ MONITORED_LOGS = config["logging"]["monitored_logs"]
 SUM_LAB_LOGO = config["data"]["sumlab_logo"]
 EU_FOOTER = config["data"]["eu_footer"]
 PREVIEW_REFRESH_RATE = 0.5  # Refresh rate for camera preview in seconds
+
+
+# --- classes ---
+
+class ConfigPayload(BaseModel):
+    send_image: bool
+    refresh_rate: float  # Puedes cambiar por condecimal(ge=0.1, le=5.0) si quieres validar rango exacto
+
 
 # --- Helper Functions ---
 
@@ -36,11 +46,9 @@ def update_config(send_image, preview_refresh_rate):
     """Updates the send_image and preview refresh rate via API."""
     print(f"Updating config: send_image={send_image}, preview_refresh_rate={preview_refresh_rate}")
     try:
-        payload = {
-            "send_image": bool(send_image),
-            "refresh_rate": float(preview_refresh_rate)
-        }
-        response = requests.post(f"{API_URL}:8000/config", json=payload, timeout=5)
+        payload = ConfigPayload(send_image=bool(send_image), refresh_rate=float(preview_refresh_rate))
+        print(f"Validated payload: {payload.model_dump_json()}")
+        response = requests.post(f"{API_URL}:8000/config", json=payload.model_dump(), timeout=5)
         response.raise_for_status()
         return True
     except requests.exceptions.RequestException as e:
