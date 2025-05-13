@@ -383,17 +383,18 @@ elif st.session_state.page == "Detection Query":
 
     if "filtered_df" in st.session_state and not st.session_state.filtered_df.empty:
         df = st.session_state.filtered_df
-        df = df.drop(columns=['image', 'x_position', 'y_position'], errors='ignore')
+        # Agrupar por vehicle_id mostrando la última detección por timestamp
+        df_display = df.sort_values('timestamp').groupby('vehicle_id', as_index=False).last()
+        df = df
         col_left, col_right = st.columns([2, 1])
 
         with col_left:
-            gb = GridOptionsBuilder.from_dataframe(df)
+            display_columns = [col for col in df_display.columns if col not in ['x_position', 'y_position', 'image']]
+            gb = GridOptionsBuilder.from_dataframe(df_display[display_columns])
             gb.configure_selection('single', use_checkbox=True)
-            gb.configure_pagination(enabled=True)
-            gb.configure_default_column(groupable=True, value=True, enableRowGroup=True, editable=False)
             grid_options = gb.build()
             grid_return = AgGrid(
-                df,
+                df_display[display_columns],
                 gridOptions=grid_options,
                 update_mode=GridUpdateMode.SELECTION_CHANGED,
                 theme='streamlit',
@@ -406,16 +407,32 @@ elif st.session_state.page == "Detection Query":
         with col_right:
             if  len(selected_rows) > 0:
                 row=selected_rows.iloc[0]
+                vehicle_id = row['vehicle_id']
                 st.markdown("### 📷 Captura seleccionada")
                 st.write("**Detalles:**")
                 st.json(row.to_json())
-                if 'image' in row and row['image']:
-                    try:
-                        image_bytes = base64.b64decode(row['image'])
-                        nparr = np.frombuffer(image_bytes, np.uint8)
-                        frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-                        st.image(frame, channels="BGR", use_container_width=True)
-                    except Exception as e:
-                        st.warning(f"No se pudo decodificar la imagen: {e}")
             else:
                 st.info("Selecciona una fila en la tabla para ver la imagen y detalles aquí.")
+                
+        all_vehicle_detections = df[df['vehicle_id'] == vehicle_id]
+        images = []
+        captions = []
+        for idx, detection in all_vehicle_detections.iterrows():
+            if 'image' in detection and detection['image']:
+                try:
+                    image_bytes = base64.b64decode(detection['image'])
+                    nparr = np.frombuffer(image_bytes, np.uint8)
+                    frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+                    images.append(frame)
+                    captions.append(f"{detection['timestamp']}")
+                except Exception as e:
+                    st.warning(f"No se pudo decodificar la imagen: {e}")
+        if images:
+            # Mostrar en una cuadrícula de 3 columnas por fila
+            cols = st.columns(3)
+            for i, (img, caption) in enumerate(zip(images, captions)):
+                with cols[i % 3]:
+                    st.image(img, caption=caption, channels="BGR", use_container_width=True)
+        else:
+            st.info("No hay imágenes disponibles para este vehicle_id.")
+            
