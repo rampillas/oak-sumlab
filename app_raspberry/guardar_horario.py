@@ -170,6 +170,7 @@ def send_hourly_data(lock): # Receive the lock as a parameter
                                     log_to_db("WARNING", f"⚠️ API error ({response.status_code}). Retrying in 5 min...")
                                 time.sleep(300)
                         except requests.exceptions.RequestException:
+                            raise
                             with log_lock:
                                 log_to_db("ERROR", "❌ No connection to API. Retrying in 5 min...")
                             time.sleep(300)
