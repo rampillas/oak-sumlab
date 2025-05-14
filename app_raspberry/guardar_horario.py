@@ -131,7 +131,7 @@ def send_hourly_data(lock): # Receive the lock as a parameter
                 )
                 data = cursor.fetchall()
                 conn.close()
-                print(f"Data to upload: {data}")
+                #print(f"Data to upload: {data}")
                 with log_lock:
                     log_to_db("INFO", f"🔄 Found {len(data)} new detections to upload")
 
