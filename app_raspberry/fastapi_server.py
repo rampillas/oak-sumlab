@@ -7,7 +7,6 @@ import os
 import uvicorn
 import logging
 import threading
-import sqlite3
 import yaml
 import base64
 from config_loader import load_config
@@ -26,7 +25,6 @@ MASTER_DB_HOST = config["master_db"]["host"]
 MASTER_DB_NAME = config["master_db"]["name"]
 MASTER_DB_USER = config["master_db"]["user"]
 MASTER_DB_PASSWORD = config["master_db"]["password"]
-DB_PATH = config["data"]["db_path"]
 
 PG_HOST = config["pg_db"]["host"]
 PG_NAME= config["pg_db"]["name"]
@@ -140,14 +138,20 @@ class DetectionData(BaseModel):
 
 @app.get("/ultima-imagen")
 def get_last_image():   
-    """Returns the last image from the master database."""
-    with conn_lock:
-        conn= sqlite3.connect(DB_PATH)
+    """Returns the last image from the PostgreSQL database."""
+    try:
+        conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
         cursor = conn.cursor()
-        cursor.execute("SELECT image FROM preview_images LIMIT 1")
+        cursor.execute("SELECT image FROM preview_images ORDER BY id DESC LIMIT 1")
         result = cursor.fetchone()
+        if result and result[0]:
+            return {"image": base64.b64encode(result[0]).decode('utf-8')}
+        else:
+            raise HTTPException(status_code=404, detail="No preview image found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error fetching image: {e}")
+    finally:
         conn.close()
-    return result[0] if result and result[0] else None
 
 # Endpoint to get the last upload time
 @app.get("/last-upload-time")
@@ -181,18 +185,12 @@ def get_last_upload_time():
 
 @app.get("/detections")
 def get_detections(show_image: Optional[bool] = Query(False, description="Include image in the response")):
-    """
-    Returns the last 50 detections in JSON format.
-    If show_image is True, includes the image from preview_images table.
-    """
-    conn_sqlite = None
+    """Returns the last 50 detections from PostgreSQL."""
     try:
-        with conn_lock:
-            conn_sqlite = sqlite3.connect(DB_PATH)
-            cursor_sqlite = conn_sqlite.cursor()
-            cursor_sqlite.execute("SELECT id, timestamp, vehicle_id, x_position, y_position, direction FROM detections ORDER BY id DESC LIMIT 50")
-            rows = cursor_sqlite.fetchall()
-            conn_sqlite.close()
+        conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
+        cursor = conn.cursor()
+        cursor.execute("SELECT id, timestamp, vehicle_id, x_position, y_position, direction FROM detections ORDER BY id DESC LIMIT 50")
+        rows = cursor.fetchall()
         detections = []
         for row in rows:
             detection = {
@@ -203,32 +201,32 @@ def get_detections(show_image: Optional[bool] = Query(False, description="Includ
                 "y_position": row[4],
                 "direction": row[5]
             }
-            detections.append(detection)
             
+            detections.append(detection)
         return {"detections": detections}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error fetching detections: {e}")
     finally:
-        pass
+        conn.close()
 
 
 @app.get("/preview_image")
 def get_preview_image():
-    """Returns the last image encoded in base64 with key 'image_data'."""
-    with conn_lock:
-        conn = sqlite3.connect(DB_PATH)
+    """Returns the last image from preview_images table in PostgreSQL."""
+    try:
+        conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
         cursor = conn.cursor()
-        cursor.execute("SELECT image FROM preview_images LIMIT 1")
+        cursor.execute("SELECT image FROM preview_images ORDER BY id DESC LIMIT 1")
         result = cursor.fetchone()
+        if result and result[0]:
+            image_base64 = base64.b64encode(result[0]).decode('utf-8')
+            return {"image_data": image_base64}
+        else:
+            raise HTTPException(status_code=404, detail="No preview image found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error fetching preview image: {e}")
+    finally:
         conn.close()
-    if result and result[0]:
-        image_bytes = result[0]
-        if isinstance(image_bytes, memoryview):
-            image_bytes = image_bytes.tobytes()
-        image_base64 = base64.b64encode(image_bytes).decode('utf-8')
-        return {"image_data": image_base64}
-    else:
-        raise HTTPException(status_code=404, detail="No preview image found")
 
 
 @app.get("/vehicle_count_last_hour")
@@ -324,35 +322,24 @@ class ConfigUpdateObj(BaseModel):
 
 @app.post("/config")
 def update_config(config_data: ConfigUpdateObj):
-    """Updates the config table in SQLite with send_image and refresh_rate."""
-    print(config_data)
-    with conn_lock:
-        conn = sqlite3.connect(DB_PATH)
+    """Updates the config table in PostgreSQL."""
+    try:
+        conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
         cursor = conn.cursor()
-        try:
-            cursor.execute("""
-                CREATE TABLE IF NOT EXISTS config (
-                    id INTEGER PRIMARY KEY,
-                    send_image BOOLEAN,
-                    refresh_rate REAL
-                )
-            """)
-            cursor.execute("SELECT id FROM config WHERE id=1")
-            if cursor.fetchone():
-                cursor.execute("UPDATE config SET send_image=?, refresh_rate=? WHERE id=1",
-                               (config_data.send_image, config_data.refresh_rate_n))
-            else:
-                cursor.execute("INSERT INTO config (id, send_image, refresh_rate) VALUES (1, ?, ?)",
-                               (config_data.send_image, config_data.refresh_rate_n))
-            conn.commit()
-            return {"message": "Config updated successfully"}
-        except Exception as e:
-            conn.rollback()
-            with log_lock:
-                log_to_db("ERROR", f"❌ Error updating config: {e}")
-            raise HTTPException(status_code=500, detail=f"Error updating config: {e}")
-        finally:
-            conn.close()
+        cursor.execute("""
+            INSERT INTO config (id, send_image, refresh_rate)
+            VALUES (1, %s, %s)
+            ON CONFLICT (id) DO UPDATE SET send_image = EXCLUDED.send_image, refresh_rate = EXCLUDED.refresh_rate
+        """, (config_data.send_image, config_data.refresh_rate_n))
+        conn.commit()
+        return {"message": "Config updated successfully"}
+    except Exception as e:
+        conn.rollback()
+        with log_lock:
+            log_to_db("ERROR", f"❌ Error updating config: {e}")
+        raise HTTPException(status_code=500, detail=f"Error updating config: {e}")
+    finally:
+        conn.close()
 
 
 def run_server(lock):

@@ -72,8 +72,8 @@ class VehicleTracker:
                     else: 
                         self.data[tracklet_id]["historial"].append('undefined')
                         movement_directions[int(tracklet_id)] = self.data[tracklet_id]["historial"]
-                except KeyError:
-                    print('KeyError')
+                except KeyError as e:
+                    print('KeyError',e, 'id', tracklet_id, 'data',self.data)
                     pass
 
             elif t.status == dai.Tracklet.TrackingStatus.LOST:

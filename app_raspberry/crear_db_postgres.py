@@ -57,6 +57,46 @@ def create_tables():
             cursor.execute(create_table_query)
             print(f"✅ Tabla '{table_name}' creada o ya existente.")
 
+        # Crear tabla detections
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS detections (
+                id SERIAL PRIMARY KEY,
+                timestamp TIMESTAMP,
+                vehicle_id TEXT,
+                x_position REAL,
+                y_position REAL,
+                direction TEXT,
+                image BYTEA
+            );
+        """)
+        print("✅ Tabla 'detections' creada o ya existente.")
+
+        # Crear tabla config
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS config (
+                id SERIAL PRIMARY KEY,
+                send_image BOOLEAN,
+                refresh_rate REAL
+            );
+        """)
+        print("✅ Tabla 'config' creada o ya existente.")
+
+        # Crear tabla preview_images
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS preview_images (
+                id SERIAL PRIMARY KEY,
+                image BYTEA
+            );
+        """)
+        print("✅ Tabla 'preview_images' creada o ya existente.")
+
+        # Insertar fila con id=1 en config si no existe
+        cursor.execute("""
+            INSERT INTO config (id, send_image, refresh_rate)
+            VALUES (1, FALSE, 0)
+            ON CONFLICT (id) DO NOTHING;
+        """)
+
         conn.commit()
         cursor.close()
         conn.close()

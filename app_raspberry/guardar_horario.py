@@ -1,5 +1,4 @@
 import threading
-import sqlite3
 import requests
 import psycopg2
 
@@ -124,10 +123,10 @@ def send_hourly_data(lock): # Receive the lock as a parameter
                 with log_lock:
                     log_to_db("INFO", f"⏳ Uploading data from {last_upload_time} to {current_hour_start}")
 
-                conn = sqlite3.connect(DB_PATH)
+                conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
                 cursor = conn.cursor()
                 cursor.execute(
-                    "SELECT * FROM detections WHERE timestamp >= ? AND timestamp < ?",
+                    "SELECT * FROM detections WHERE timestamp >= %s AND timestamp < %s",
                     (last_upload_time.strftime("%Y-%m-%d %H:%M:%S"), current_hour_start.strftime("%Y-%m-%d %H:%M:%S")),
                 )
                 data = cursor.fetchall()
@@ -158,10 +157,10 @@ def send_hourly_data(lock): # Receive the lock as a parameter
                                         f"✅ Data from {last_upload_time} to {current_hour_start} uploaded and deleting"
                                     )
 
-                                conn = sqlite3.connect(DB_PATH)
+                                conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
                                 cursor = conn.cursor()
                                 cursor.execute(
-                                    "DELETE FROM detections WHERE timestamp < ?",
+                                    "DELETE FROM detections WHERE timestamp < %s",
                                     (current_hour_start.strftime("%Y-%m-%d %H:%M:%S"),),
                                 )
                                 conn.commit()
@@ -198,7 +197,7 @@ def delete_old_images(lock): # Receive the lock as a parameter
             now = datetime.now()
             with log_lock:
                 log_to_db("INFO", f"⏳ Cleaning up old images..., current time: {now}")
-            conn = sqlite3.connect(DB_PATH)
+            conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
             cursor = conn.cursor()
 
             try:
@@ -211,21 +210,21 @@ def delete_old_images(lock): # Receive the lock as a parameter
                     with log_lock:
                         log_to_db("INFO", "✅ Keep contrary images are enabled")
                     number_of_rows = cursor.execute(
-                        "SELECT COUNT(*) FROM detections WHERE image IS NOT NULL and direction != 'ascending' AND timestamp < ?",
+                        "SELECT COUNT(*) FROM detections WHERE image IS NOT NULL and direction != 'ascending' AND timestamp < %s",
                         (threshold_time_str,)).fetchone()[0]
                     with log_lock:
                         log_to_db("INFO", f"🔄 Deleting {number_of_rows} contrary images if exists")
-                    cursor.execute("UPDATE detections SET image = NULL WHERE direction != 'ascending' AND timestamp < ?",
+                    cursor.execute("UPDATE detections SET image = NULL WHERE direction != 'ascending' AND timestamp < %s",
                                    (threshold_time_str,))
                 else:
                     with log_lock:
                         log_to_db("INFO", "✅ Keep contrary images are disabled")
                     number_of_rows = cursor.execute(
-                        "SELECT COUNT(*) FROM detections WHERE image IS NOT NULL and timestamp < ?",
+                        "SELECT COUNT(*) FROM detections WHERE image IS NOT NULL and timestamp < %s",
                         (threshold_time_str,)).fetchone()[0]
                     with log_lock:
                         log_to_db("INFO", f"🔄 Deleting {number_of_rows} images")
-                    cursor.execute("UPDATE detections SET image = NULL WHERE  timestamp < ?", (threshold_time_str,))
+                    cursor.execute("UPDATE detections SET image = NULL WHERE  timestamp < %s", (threshold_time_str,))
                 conn.commit()
                 with log_lock:
                     log_to_db("INFO", "✅ Old images deleted successfully")

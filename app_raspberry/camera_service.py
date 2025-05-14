@@ -75,80 +75,43 @@ def update_status(thread_name, status, lock):  # Receive the lock as a parameter
             yaml.dump(data, f)
 
 
-# Initialize the database (if it doesn't exist)
-conn = sqlite3.connect(DB_PATH)
-cursor = conn.cursor()
-if  os.path.exists(DB_PATH):
-    cursor.execute(
-        """
-        CREATE TABLE IF NOT EXISTS detections (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp TEXT,
-            vehicle_id TEXT,
-            x_position REAL,
-            y_position REAL,
-            direction TEXT,
-            image BLOB
-        )
-    """
-    )
-    cursor.execute(
-        """
-        CREATE TABLE IF NOT EXISTS config (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            send_image BOOLEAN,
-            refresh_rate REAL
-        )
-    """
-    )
-    cursor.execute("INSERT INTO config (send_image, refresh_rate) VALUES (?,?)", (False,0.5))
-    conn.commit()
-    cursor.execute(
-        """
-        CREATE TABLE IF NOT EXISTS preview_images (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            image BLOB
-        )
-    """
-    )
-    cursor.execute("INSERT INTO preview_images (image) VALUES (?)", (None,))
-    conn.commit()
- 
-conn.close()
-
 
 def save_detection(vehicle_id, x_pos, y_pos, direction, image_data=None):
-    """Saves a vehicle detection to the database."""
+    """Saves a vehicle detection to the PostgreSQL database."""
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = psycopg2.connect(
+            host=PG_HOST,
+            database=PG_NAME,
+            user=PG_USERNAME,
+            password=PG_PASSWORD
+        )
         cursor = conn.cursor()
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        timestamp = datetime.now()
         cursor.execute(
-            "INSERT INTO detections (timestamp, vehicle_id, x_position, y_position, direction, image) VALUES (?, ?, ?, ?, ?, ?)",
-            (timestamp, vehicle_id, x_pos, y_pos, direction, image_data),
+            "INSERT INTO detections (timestamp, vehicle_id, x_position, y_position, direction, image) VALUES (%s, %s, %s, %s, %s, %s)",
+            (timestamp, vehicle_id, x_pos, y_pos, direction, psycopg2.Binary(image_data) if image_data else None)
         )
         conn.commit()
-        
-    except sqlite3.Error as e:
+    except Exception as e:
         with log_lock:
             log_to_db("ERROR", f"❌ Error saving detection: {e}")
     finally:
         conn.close()
 
 def save_image(image_data=None):
-    """Saves an image to the database."""
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-   
-    try: 
-        cursor.execute("DELETE FROM preview_images")   
-        cursor.execute(
-            f"INSERT into preview_images (image) VALUES (?)", (image_data,)
+    """Saves an image to the PostgreSQL database."""
+    try:
+        conn = psycopg2.connect(
+            host=PG_HOST,
+            database=PG_NAME,
+            user=PG_USERNAME,
+            password=PG_PASSWORD
         )
-        
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM preview_images")
+        cursor.execute("INSERT INTO preview_images (image) VALUES (%s)", (psycopg2.Binary(image_data),))
         conn.commit()
-       
-    except sqlite3.Error as e:  
+    except Exception as e:
         with log_lock:
             log_to_db("ERROR", f"❌ Error saving image: {e}")
     finally:
@@ -195,34 +158,32 @@ def send_alert(vehicle_id, x_pos, y_pos, alert_type="Sentido contrario"):
 
 
 def get_config():
-    """Gets the configuration (send_image status) from the database."""
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
     try:
+        conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
+        cursor = conn.cursor()
         cursor.execute("SELECT send_image FROM config WHERE id = 1")
         result = cursor.fetchone()
         return result[0] if result else False
-    except sqlite3.Error as e:
+    except Exception as e:
         with log_lock:
             log_to_db("ERROR", f"❌ Error getting config: {e}")
-        return False  # Default to False in case of error
+        return False
     finally:
         conn.close()
 
 def get_refresh_rate():
-    """Gets the refresh rate (in seconds) from the database."""
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    try:    
+    try:
+        conn = psycopg2.connect(host=PG_HOST, database=PG_NAME, user=PG_USERNAME, password=PG_PASSWORD)
+        cursor = conn.cursor()
         cursor.execute("SELECT refresh_rate FROM config WHERE id = 1")
         result = cursor.fetchone()
         return result[0] if result else 0.5
-    except sqlite3.Error as e:
+    except Exception as e:
         with log_lock:
             log_to_db("ERROR", f"❌ Error getting refresh rate: {e}")
-        return 0.5  # Default to 0.5 in case of error
+        return 0.5
     finally:
-        conn.close()    
+        conn.close()   
 
 def initialize_camera():
     """
