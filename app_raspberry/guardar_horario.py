@@ -139,7 +139,7 @@ def send_hourly_data(lock): # Receive the lock as a parameter
                     json_data = [
                         {
                             "id": row[0],
-                            "timestamp": row[1],
+                            "timestamp": str(row[1]),
                             "vehicle_id": row[2],
                             "x_position": row[3],
                             "y_position": row[4],
